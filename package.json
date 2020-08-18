@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/badescuCosmin/et-dev#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "bootstrap": "^4.5.2",
     "jquery": "^3.5.1",
     "roboto-fontface": "^0.10.0"
