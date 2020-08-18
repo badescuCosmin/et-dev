@@ -1,6 +1,7 @@
 @import url(./node_modules/@fortawesome/fontawesome-free/css/all.min.css);
 body {
     background-color: #58abef15;
+    background: linear-gradient( to right, #58abef52, #ff84003f, #ffffff);
 }
 
 .subscription-container {
@@ -11,9 +12,13 @@ body {
     padding: 2px;
 }
 
+.subscription-container .list-group .list-group-item {
+    padding: 2px 5px;
+}
+
 .list-group-item {
     border: 0px solid transparent;
-    padding: 2px 5px;
+    background-color: transparent;
 }
 
 .subscription-container .list-group-item .icon-wrapper {
@@ -27,22 +32,38 @@ body {
     color: #17194C;
 }
 
+
+/* SUBSCRIPTION-CARD */
+
 .subscription-card-wrapper {
-    width: 140px;
+    width: 161.2px;
+    height: 132.6px;
     border-radius: 70% / 15%;
-    background: linear-gradient(#20D27B 0%, #0C8B9F 100%);
-    height: 100px;
+    border-radius: 15.599999px 0px 15.599999px 15.599999 0px 15.599999;
+    background: linear-gradient(to right top, #0C8B9F, #20D27B);
     -webkit-box-shadow: 0px 3px 13px 0px rgba(22, 59, 157, 0.5);
     -moz-box-shadow: 0px 3px 13px 0px rgba(22, 59, 157, 0.5);
     box-shadow: 0px 3px 13px 0px rgba(22, 59, 157, 0.5);
 }
 
 .subscription-card-wrapper .text-wrapper {
-    margin: auto;
+    text-align: center;
+    padding-top: 20px;
 }
 
-.flex-direction-column {
-    flex-direction: column!important;
+.subscription-card-wrapper .text-wrapper .price {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 36.4px;
+    color: #FFFFFF;
+}
+
+.subscription-card-wrapper .text-wrapper .text {
+    font-family: 'Roboto-Regular';
+    font-size: 20.8px;
+    color: #FFFFFF;
+    font-weight: 400;
+    opacity: 80%;
 }
 
 
@@ -50,19 +71,21 @@ body {
 
 .questions-container {
     background: linear-gradient(#242835 0%, #1D2029 100%);
-    padding: 10px 15px;
-    border-radius: 10px;
+    padding: 15px;
+    border-radius: 12px;
+    width: 370px;
+    margin: 10px;
     color: #ffffff;
 }
 
-.questions-container .list-group-item {
-    background-color: transparent;
-}
-
 .questions-container .list-group-item .title {
-    font-family: 'Roboto';
+    font-family: 'Roboto-Medium';
     font-size: 16px;
     padding: 10px 0px;
+}
+
+.questions-container .list-group-item :first-child {
+    padding-top: 0px;
 }
 
 .questions-container .list-group-item .text {
