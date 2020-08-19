@@ -1,13 +1,11 @@
 body {
-    background: linear-gradient( to right, #58abef52, #ff84003f, #ffffff);
-    /* ASTA E IMPORTANTA SA NU POATA USERUL SA IA TEXT DE PE ORICE TEXT */
+    background: linear-gradient(to right, #58abef52, #ff84003f, #ffffff);
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
     margin-bottom: 50px;
 }
-
 
 /* navbar styles */
 .navbar {
@@ -19,11 +17,7 @@ body {
 .mavbar .navbar-wrapper.container {
     padding: 0;
 }
-@media only screen and (max-width: 627px) {
-    .container {
-        padding: 0 20px;
-    }
-}
+
 .navbar .navbar-wrapper .navbar-links ul {
     list-style: none;
     margin: 0;
@@ -104,11 +98,6 @@ body {
 .main-content {
     margin-top: 80px;
 }
-@media only screen and (max-width: 576px) {
-    .main-content {
-        margin-top: 35px;
-    }
-}
 .main-content .main-content-title {
     color: #f52865;
     font-family: "Roboto";
@@ -126,23 +115,8 @@ body {
     max-width: 370px;
     margin-top: 80px;
 }
-@media only screen and (max-width: 992px) {
-    .main-content .main-content-body .questions-container {
-        margin: 0 auto;
-    }
-}
 .main-content .main-content-body .subscription-container {
     max-width: 430px;
-}
-@media only screen and (max-width: 992px) {
-    .main-content .main-content-body .subscription-container{
-        max-width: 370px;
-    }
-}
-@media only screen and (max-width: 992px) {
-    .main-content .main-content-body .subscription-container {
-        margin: 0 auto;
-    }
 }
 .main-content .main-content-body .subscription-container h3 {
     color: #252d3c;
@@ -153,12 +127,6 @@ body {
     font-weight: 500px;
     margin-bottom: 30px;
 }
-@media only screen and (max-width: 576px) {
-    .main-content .main-content-body .subscription-container h3 {
-        margin-top: 40px;
-        margin-bottom: 16px;
-    }
-}
 .main-content .main-content-body .subscription-container h3 span {
     color: #717084;
 }
@@ -168,40 +136,27 @@ body {
 .subscription-container .subscription-details .headers-container {
     margin-bottom: 50px;
 }
-@media only screen and (max-width: 576px) {
-    .subscription-container .subscription-details .headers-container {
-        margin-bottom: 32px;
-    }
-}
 
-.subscription-container {
-    padding: 5px;
-}
-
+/* subscription list */
 .subscription-container .list-group {
     padding: 2px;
 }
-
 .subscription-container .list-group .list-group-item {
     padding: 2px 5px;
 }
-
 .list-group-item {
     border: 0px solid transparent;
     background-color: transparent;
 }
-
 .subscription-container .list-group-item .icon-wrapper {
     padding: 5px;
-    color: #00BE52;
+    color: #00be52;
 }
-
 .subscription-container .list-group-item .text-wrapper {
     padding: 5px;
-    font-family: 'Roboto-Regular';
-    color: #17194C;
+    font-family: "Roboto-Regular";
+    color: #17194c;
 }
-
 
 /* SUBSCRIPTION-CARD */
 
@@ -210,7 +165,7 @@ body {
     height: 132.6px;
     border-radius: 70% / 15%;
     border-radius: 15.599999px 0px 15.599999px 15.599999 0px 15.599999;
-    background: linear-gradient(to right top, #0C8B9F, #20D27B);
+    background: linear-gradient(to right top, #0c8b9f, #20d27b);
     -webkit-box-shadow: 0px 3px 13px 0px rgba(22, 59, 157, 0.5);
     -moz-box-shadow: 0px 3px 13px 0px rgba(22, 59, 157, 0.5);
     box-shadow: 0px 3px 13px 0px rgba(22, 59, 157, 0.5);
@@ -222,25 +177,24 @@ body {
 }
 
 .subscription-card-wrapper .text-wrapper .price {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 700;
     font-size: 36.4px;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .subscription-card-wrapper .text-wrapper .text {
-    font-family: 'Roboto-Regular';
+    font-family: "Roboto-Regular";
     font-size: 20.8px;
-    color: #FFFFFF;
+    color: #ffffff;
     font-weight: 400;
     opacity: 80%;
 }
 
-
 /* QUESTIONS */
 
 .questions-container {
-    background: linear-gradient(#242835 0%, #1D2029 100%);
+    background: linear-gradient(#242835 0%, #1d2029 100%);
     padding: 15px;
     border-radius: 12px;
     margin: 10px;
@@ -251,7 +205,7 @@ body {
 }
 
 .questions-container .list-group-item .title {
-    font-family: 'Roboto-Medium';
+    font-family: "Roboto-Medium";
     font-size: 16px;
     padding: 10px 0px;
 }
@@ -261,19 +215,18 @@ body {
 }
 
 .questions-container .list-group-item .text {
-    font-family: 'Roboto-Light';
+    font-family: "Roboto-Light";
     font-size: 14px;
-    color: #E8E7F5;
+    color: #e8e7f5;
 }
 
 /* ITEM-BOX-CONTAINER */
 
 .item-box-container {
-    
     border-radius: 12px;
     margin: 20px 0px;
     padding: 10px 20px 10px 20px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border: 2px solid transparent;
     -webkit-box-shadow: 0px 2px 10px 0px rgba(22, 59, 157, 0.5);
     -moz-box-shadow: 0px 2px 10px 0px rgba(22, 59, 157, 0.5);
@@ -286,13 +239,13 @@ body {
 }
 
 .item-box-container .text-container .main-text .text-style {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-size: 16px;
     font-weight: 700;
 }
 
 .item-box-container .text-container .main-text .text {
-    color: #41436B;
+    color: #41436b;
     width: 80%;
 }
 
@@ -304,7 +257,7 @@ body {
 
 .item-box-container .text-container .sub-text {
     color: #717084;
-    font-family: 'Roboto-Regular';
+    font-family: "Roboto-Regular";
     font-size: 14px;
     padding: 5px;
 }
@@ -313,7 +266,7 @@ body {
     width: 30px;
     height: 30px;
     margin-top: 5px;
-    background-color: #F2FAFD;
+    background-color: #f2fafd;
     border-radius: 8px;
     border: 1px solid #116fda3a;
     cursor: pointer;
@@ -333,32 +286,33 @@ body {
 }
 
 .item-box-container .checkbox-wrapper .checkbox-icon-add {
-    color: #1170DA;
+    color: #1170da;
 }
 
 .item-box-container .checkbox-wrapper .checkbox-icon-check {
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .item-box-check-background {
-    background: linear-gradient( #9CD47D, #00BE52);
-    border: 1px solid #9CD47D !important;
+    background: linear-gradient(#9cd47d, #00be52);
+    border: 1px solid #9cd47d !important;
 }
 
 .blue-color {
-    color: #1170DA !important;
+    color: #1170da !important;
 }
 
 /* primary btn styless */
-/* .main-content .main-content-body .subscription-container .btn-mask::before{
+.btn-mask::before {
     content: "";
     position: absolute;
-    border-top: 1px solid #41436B;
-    bottom:24px;
-    left: 0;
     width: 100%;
-    z-index: 2;
-} */
+    height: 1px;
+    background: linear-gradient( #41436B, #41436B);
+    opacity: .2;
+    bottom: 24px;
+    z-index: -1;
+}
 
 .button-primary {
     height: 50px;
@@ -375,16 +329,6 @@ body {
     font-family: "Roboto";
     z-index: 10;
 }
-
-@media only screen and (max-width: 992px) {
-    .button-primary {
-        position: fixed;
-        bottom: 0;
-        left: 50%;
-        width: 370px;
-        transform: translate(-50%);
-    }
-}
 .button-primary:hover,
 .button-primary:focus {
     outline: 0;
@@ -394,4 +338,68 @@ body {
     font-weight: 300;
     font-size: 16px;
     margin-left: 20px;
+}
+.btn-wrapper {
+    position: relative;
+}
+/* media queries */
+
+@media only screen and (max-width: 992px) {
+    .main-content .main-content-body .questions-container {
+        margin: 0 auto;
+    }
+    .main-content .main-content-body .subscription-container {
+        max-width: 370px;
+    }
+    .main-content .main-content-body .subscription-container {
+        margin: 0 auto;
+    }
+    .subscription-container .subscription-details .headers-container {
+        padding: 0;
+    }
+    .subscription-container .list-group {
+        padding: 0;
+    }
+    .subscription-container .list-group .list-group-item {
+        padding: 2px 0px;
+    }
+    .subscription-container .list-group-item .icon-wrapper {
+        padding: 5px 5px 5px 0;
+    }
+    .button-primary {
+        width: 370px;
+    }
+    .btn-wrapper {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        width: 100%;
+        z-index: 2;
+        transform: translate(-50%);
+        background-color: #fff;
+        padding: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .main-content {
+        margin-top: 35px;
+    }
+    .main-content .main-content-body .subscription-container h3 {
+        margin-top: 40px;
+        margin-bottom: 16px;
+    }
+    .main-content .main-content-body .subscription-container h3 {
+        margin-top: 40px;
+        margin-bottom: 16px;
+    }
+    .subscription-container .subscription-details .headers-container {
+        margin-bottom: 32px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .button-primary {
+        width: 90%;
+    }
 }
