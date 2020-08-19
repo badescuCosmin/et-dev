@@ -1,3 +1,15 @@
+body {
+    background: linear-gradient( to right, #58abef52, #ff84003f, #ffffff);
+    /* ASTA E IMPORTANTA SA NU POATA USERUL SA IA TEXT DE PE ORICE TEXT */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 50px;
+}
+
+
+/* navbar styles */
 .navbar {
     padding: 0;
     height: 70px;
@@ -86,4 +98,300 @@
 }
 .navbar .navbar-wrapper .navbar-links .navbar-links-mobile span:not(:last-child) {
     margin-right: 10px;
+}
+
+/* content grid styles responsive */
+.main-content {
+    margin-top: 80px;
+}
+@media only screen and (max-width: 576px) {
+    .main-content {
+        margin-top: 35px;
+    }
+}
+.main-content .main-content-title {
+    color: #f52865;
+    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: 500px;
+    line-height: 24px;
+}
+.main-content .main-content-subtitle {
+    color: #1e2843;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 24px;
+}
+.main-content .main-content-body .questions-container {
+    max-width: 370px;
+    margin-top: 80px;
+}
+@media only screen and (max-width: 992px) {
+    .main-content .main-content-body .questions-container {
+        margin: 0 auto;
+    }
+}
+.main-content .main-content-body .subscription-container {
+    max-width: 430px;
+}
+@media only screen and (max-width: 992px) {
+    .main-content .main-content-body .subscription-container{
+        max-width: 370px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .main-content .main-content-body .subscription-container {
+        margin: 0 auto;
+    }
+}
+.main-content .main-content-body .subscription-container h3 {
+    color: #252d3c;
+    margin-top: 50px;
+    font-size: 18px;
+    font-family: "Roboto";
+    line-height: 24px;
+    font-weight: 500px;
+    margin-bottom: 30px;
+}
+@media only screen and (max-width: 576px) {
+    .main-content .main-content-body .subscription-container h3 {
+        margin-top: 40px;
+        margin-bottom: 16px;
+    }
+}
+.main-content .main-content-body .subscription-container h3 span {
+    color: #717084;
+}
+.main-content .main-content-body .subscription-container .subscription-boxes {
+    margin-bottom: 30px;
+}
+.subscription-container .subscription-details .headers-container {
+    margin-bottom: 50px;
+}
+@media only screen and (max-width: 576px) {
+    .subscription-container .subscription-details .headers-container {
+        margin-bottom: 32px;
+    }
+}
+
+.subscription-container {
+    padding: 5px;
+}
+
+.subscription-container .list-group {
+    padding: 2px;
+}
+
+.subscription-container .list-group .list-group-item {
+    padding: 2px 5px;
+}
+
+.list-group-item {
+    border: 0px solid transparent;
+    background-color: transparent;
+}
+
+.subscription-container .list-group-item .icon-wrapper {
+    padding: 5px;
+    color: #00BE52;
+}
+
+.subscription-container .list-group-item .text-wrapper {
+    padding: 5px;
+    font-family: 'Roboto-Regular';
+    color: #17194C;
+}
+
+
+/* SUBSCRIPTION-CARD */
+
+.subscription-card-wrapper {
+    width: 161.2px;
+    height: 132.6px;
+    border-radius: 70% / 15%;
+    border-radius: 15.599999px 0px 15.599999px 15.599999 0px 15.599999;
+    background: linear-gradient(to right top, #0C8B9F, #20D27B);
+    -webkit-box-shadow: 0px 3px 13px 0px rgba(22, 59, 157, 0.5);
+    -moz-box-shadow: 0px 3px 13px 0px rgba(22, 59, 157, 0.5);
+    box-shadow: 0px 3px 13px 0px rgba(22, 59, 157, 0.5);
+}
+
+.subscription-card-wrapper .text-wrapper {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.subscription-card-wrapper .text-wrapper .price {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 36.4px;
+    color: #FFFFFF;
+}
+
+.subscription-card-wrapper .text-wrapper .text {
+    font-family: 'Roboto-Regular';
+    font-size: 20.8px;
+    color: #FFFFFF;
+    font-weight: 400;
+    opacity: 80%;
+}
+
+
+/* QUESTIONS */
+
+.questions-container {
+    background: linear-gradient(#242835 0%, #1D2029 100%);
+    padding: 15px;
+    border-radius: 12px;
+    margin: 10px;
+    color: #ffffff;
+    -webkit-box-shadow: 0px 2px 12px 0px rgba(17, 112, 218, 0.5);
+    -moz-box-shadow: 0px 2px 12px 0px rgba(17, 112, 218, 0.5);
+    box-shadow: 0px 2px 12px 0px rgba(17, 112, 218, 0.5);
+}
+
+.questions-container .list-group-item .title {
+    font-family: 'Roboto-Medium';
+    font-size: 16px;
+    padding: 10px 0px;
+}
+
+.questions-container .list-group-item :first-child {
+    padding-top: 0px;
+}
+
+.questions-container .list-group-item .text {
+    font-family: 'Roboto-Light';
+    font-size: 14px;
+    color: #E8E7F5;
+}
+
+/* ITEM-BOX-CONTAINER */
+
+.item-box-container {
+    
+    border-radius: 12px;
+    margin: 20px 0px;
+    padding: 10px 20px 10px 20px;
+    background-color: #FFFFFF;
+    border: 2px solid transparent;
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(22, 59, 157, 0.5);
+    -moz-box-shadow: 0px 2px 10px 0px rgba(22, 59, 157, 0.5);
+    box-shadow: 0px 2px 10px 0px rgba(22, 59, 157, 0.5);
+}
+
+.item-box-container .text-container,
+.item-box-container .text-container .main-text {
+    padding: 1px 5px;
+}
+
+.item-box-container .text-container .main-text .text-style {
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.item-box-container .text-container .main-text .text {
+    color: #41436B;
+    width: 80%;
+}
+
+.item-box-container .text-container .main-text .price {
+    color: #717084;
+    text-align: right;
+    width: 20%;
+}
+
+.item-box-container .text-container .sub-text {
+    color: #717084;
+    font-family: 'Roboto-Regular';
+    font-size: 14px;
+    padding: 5px;
+}
+
+.item-box-container .checkbox-wrapper {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    background-color: #F2FAFD;
+    border-radius: 8px;
+    border: 1px solid #116fda3a;
+    cursor: pointer;
+    position: relative;
+}
+
+.item-box-container .checkbox-wrapper:hover {
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(22, 59, 157, 0.5);
+    -moz-box-shadow: 0px 2px 10px 0px rgba(22, 59, 157, 0.5);
+    box-shadow: 0px 2px 10px 0px rgba(22, 59, 157, 0.5);
+}
+
+.item-box-container .checkbox-wrapper .icon-style {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+}
+
+.item-box-container .checkbox-wrapper .checkbox-icon-add {
+    color: #1170DA;
+}
+
+.item-box-container .checkbox-wrapper .checkbox-icon-check {
+    color: #FFFFFF;
+}
+
+.item-box-check-background {
+    background: linear-gradient( #9CD47D, #00BE52);
+    border: 1px solid #9CD47D !important;
+}
+
+.blue-color {
+    color: #1170DA !important;
+}
+
+/* primary btn styless */
+/* .main-content .main-content-body .subscription-container .btn-mask::before{
+    content: "";
+    position: absolute;
+    border-top: 1px solid #41436B;
+    bottom:24px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+} */
+
+.button-primary {
+    height: 50px;
+    width: 310px;
+    background: linear-gradient(to right, #1970dd, #60a7fe);
+    border: none;
+    border-radius: 25px;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Roboto";
+    z-index: 10;
+}
+
+@media only screen and (max-width: 992px) {
+    .button-primary {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        width: 370px;
+        transform: translate(-50%);
+    }
+}
+.button-primary:hover,
+.button-primary:focus {
+    outline: 0;
+    box-shadow: none;
+}
+.button-primary span {
+    font-weight: 300;
+    font-size: 16px;
+    margin-left: 20px;
 }
