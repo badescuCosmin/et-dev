@@ -1,0 +1,41 @@
+.step .check{
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+.step-success .check{
+    display: block;
+
+}
+.step-content {
+    max-width: 140px;
+    width: 140px;
+
+}
+
+.step-circle{
+    width: 32px;
+    height: 32px;
+    background-color: #41436B;
+    font-size: 16px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    color:#fff;
+}
+
+.step-circle::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left:0;
+    width: 127px;
+    border-radius: 3px;
+    height: 4px;
+    transform: translate(-100%, -50%);
+    color: #adb5bd;
+    background-color: currentColor;
+}
