@@ -20,6 +20,7 @@
     width: 424px;
     background-color: orangered;
     margin-top: 105px;
+    margin-right: auto;
 }
 
 /* INPUTS */
@@ -134,6 +135,7 @@
 .mt-142 {
     margin-top: 142px;
 }
+
 @media only screen and (max-width: 576px) {
     .dotted-input-container .dotted-input-style,
     .input-container .input-style,
@@ -145,5 +147,10 @@
     }
     .container-checkbox {
         max-width: 335px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .photo-container-wrapper .photo-container{
+        margin-left: auto;
     }
 }
