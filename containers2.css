@@ -292,6 +292,13 @@ body {
     margin-bottom: 50px;
 }
 
+.steps-container .step-wrapper .text {
+    color: #17194C;
+    font-family: 'Roboto-Regular';
+    font-size: 16px;
+    font-weight: 400;
+}
+
 .steps-container .step-wrapper .circle {
     width: 40px;
     height: 40px;
@@ -325,6 +332,16 @@ body {
 
 .no-border {
     border: 1px solid transparent!important;
+}
+
+.bold-700 {
+    font-family: 'Roboto'!important;
+    font-size: 18px!important;
+    font-weight: 700!important;
+}
+
+.gray-color {
+    background-color: #41436b52 !important;
 }
 
 .green-color {

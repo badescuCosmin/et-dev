@@ -1,8 +1,6 @@
 $(document).ready(function() {
-<<<<<<< HEAD
-=======
 
->>>>>>> 878f32f439cbf80f6062fe3e4808838db60860a9
+
     var $checkboxWrapper = $('.checkbox-wrapper');
     var addIcon = '<i class="fas fa-plus fa-sm icon-style checkbox-icon-add"></i>';
     var checkIcon = '<i class="fas fa-check fa-sm icon-style checkbox-icon-check"></i>';
@@ -24,10 +22,6 @@ $(document).ready(function() {
     setSteps();
 
     function setcheckbox() {
-<<<<<<< HEAD
-=======
-    
->>>>>>> 878f32f439cbf80f6062fe3e4808838db60860a9
         $checkboxWrapper.on('click', function() {
             const $checkContainer = $(this);
             const $parentContainer = $checkContainer.parent();
@@ -70,9 +64,10 @@ $(document).ready(function() {
     }
 
     function setSteps() {
-
         $next.on('click', function() {
-            var firstChild = $stepsContainer.children('.active:first');
+            var firstChild = $stepsContainer.find('.active:first');
+
+
             var existLine = firstChild.find('.line-wrapper');
             var done = firstChild.hasClass('done');
             var brother = firstChild.next();
@@ -90,6 +85,9 @@ $(document).ready(function() {
                     firstChild.addClass('done');
                 }
 
+                firstChild.find('.text').removeClass('blue-color');
+                firstChild.find('.text').removeClass('bold-700');
+                firstChild.find("span").removeClass('gray-color');
                 firstChild.find("span").addClass('green-color');
                 firstChild.removeClass('dark-violet');
                 firstChild.find('.circle').addClass('no-border');
@@ -100,14 +98,19 @@ $(document).ready(function() {
                 brother.find('.dark-violet').removeClass('dark-violet');
                 brother.find('.opacity-80').removeClass('opacity-80');
                 brother.addClass('active');
+                brother.find('.text').addClass('blue-color');
+                brother.find('.text').addClass('bold-700');
 
             } else {
                 //nu exista clasa
-                var children = $stepsContainer.children().first();
+                var children = $stepsContainer.find('.step-wrapper').first();
                 children.addClass('active');
+                children.find('.text').addClass('blue-color');
+                children.find('.text').addClass('bold-700');
                 children.find('.no-border').removeClass('no-border');
                 children.find('.dark-violet').removeClass('dark-violet');
                 children.find('.opacity-80').removeClass('opacity-80');
+                children.find("span").removeClass('gray-color');
             }
         })
     }
