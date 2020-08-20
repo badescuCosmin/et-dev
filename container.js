@@ -1,8 +1,4 @@
 $(document).ready(function() {
-<<<<<<< HEAD
-=======
-
->>>>>>> 878f32f439cbf80f6062fe3e4808838db60860a9
     var $checkboxWrapper = $('.checkbox-wrapper');
     var addIcon = '<i class="fas fa-plus fa-sm icon-style checkbox-icon-add"></i>';
     var checkIcon = '<i class="fas fa-check fa-sm icon-style checkbox-icon-check"></i>';
@@ -24,10 +20,6 @@ $(document).ready(function() {
     setSteps();
 
     function setcheckbox() {
-<<<<<<< HEAD
-=======
-    
->>>>>>> 878f32f439cbf80f6062fe3e4808838db60860a9
         $checkboxWrapper.on('click', function() {
             const $checkContainer = $(this);
             const $parentContainer = $checkContainer.parent();
