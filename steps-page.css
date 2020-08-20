@@ -8,7 +8,7 @@
     max-width: 426px;
 }
 .info-container-wrapper .info-container .steps-container {
-    width: 424px;
+    max-width: 424px;
     height: 65px;
     margin-bottom: 40px;
 }
@@ -68,21 +68,20 @@
     margin-bottom: 0px;
     cursor: pointer;
     font-size: 14px;
-    color:#41436B;
-    font-family: 'Roboto';
+    color: #41436b;
+    font-family: "Roboto";
     font-weight: 400;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    width: 426px;
+    max-width: 426px;
     margin: auto;
 }
 .container-checkbox:not(:last-child) {
     margin-bottom: 15px;
     margin-top: 21px;
 }
-
 
 .container-checkbox input {
     position: absolute;
@@ -108,7 +107,7 @@
     opacity: 0.6;
 } */
 .container-checkbox input:checked ~ .checkmark {
-    background-color: #1170DA;
+    background-color: #1170da;
 }
 
 .container-checkbox .checkmark:after {
@@ -132,4 +131,17 @@
 }
 .mt-142 {
     margin-top: 142px;
+}
+@media only screen and (max-width: 576px) {
+    .dotted-input-container .dotted-input-style,
+    .input-container .input-style,
+    .dotted-input-container {
+        width: 335px;
+    }
+    .dotted-input-container .dotted-input-style {
+        width: 303px;
+    }
+    .container-checkbox {
+        max-width: 335px;
+    }
 }
