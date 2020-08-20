@@ -1,26 +1,25 @@
 $(document).ready(function() {
-
-    //de obicei clasele sau id-urile se declara la inceput de clasa si daca sunt cu jquery se pune un dolar in fata sa stim ca este element DOM.
-    //se declara la inceput de file pentru ca poate fi folosit de mai multe ori in program si in loc sa schimba peste tot in caz ca se schimba id/clasa schimbam doar aici
     var $checkboxWrapper = $('.checkbox-wrapper');
     var addIcon = '<i class="fas fa-plus fa-sm icon-style checkbox-icon-add"></i>';
     var checkIcon = '<i class="fas fa-check fa-sm icon-style checkbox-icon-check"></i>';
-    var radioIcon = '<i class="fas fa-check fa-sm icon-style radiobox-icon" style = "color: #FFF !important"></i>';
+    var radioIcon = '<i class="fas fa-check fa-sm icon-style radiobox-icon exist" style = "color: #FFF !important"></i>';
     var checkBackground = 'item-box-check-background';
     var solidBlueBorder = '2px solid #1170DA';
     var transparentBorder = '2px solid transparent';
     var blueColorClass = 'blue-color';
     var displayNone = 'd-none';
-    //  RADIOBOX
     var $radioboxWrapper = $('.radiobox-wrapper');
     var $itemBoxContainer = $('.item-box-container');
     var $radioCircle = $('.circle', $radioboxWrapper);
+    //STEPS
+    var $prev = $('#prev');
+    var $next = $('#next');
+    var $stepsContainer = $('.steps-container');
     setcheckbox();
     setRadiobox();
+    setSteps();
 
     function setcheckbox() {
-        //este foarte important sa folosim cu on sau bind desi eu prefer on, pentru ca e posibil ca acea clasa sau id sa nu se fi creat la momentul cand tu vrei sa faci un
-        //eveniment asa ca on asteapta cumva ca elementul DOM sa fie pus pe pagina sa se poata face evenimentul, daca nu intelegi mai citesti pe net :))
         $checkboxWrapper.on('click', function() {
             const $checkContainer = $(this);
             const $parentContainer = $checkContainer.parent();
@@ -59,6 +58,49 @@ $(document).ready(function() {
             $innerCircle.addClass(displayNone);
             $circle.addClass(checkBackground);
             $circle.append(radioIcon);
+        })
+    }
+
+    function setSteps() {
+
+        $next.on('click', function() {
+            var firstChild = $stepsContainer.children('.active:first');
+            var existLine = firstChild.find('.line-wrapper');
+            var done = firstChild.hasClass('done');
+            var brother = firstChild.next();
+
+            if (done === true) {
+                return;
+            }
+
+            if (firstChild.length !== 0) {
+                //exista clasa
+                if (existLine.length != 0) {
+                    firstChild.removeClass('active');
+
+                } else {
+                    firstChild.addClass('done');
+                }
+
+                firstChild.find("span").addClass('green-color');
+                firstChild.removeClass('dark-violet');
+                firstChild.find('.circle').addClass('no-border');
+                firstChild.find('.inner-circle').addClass('green-color');
+                firstChild.find('.number').addClass('d-none');
+                firstChild.find('.inner-circle').append(radioIcon);
+                brother.find('.no-border').removeClass('no-border');
+                brother.find('.dark-violet').removeClass('dark-violet');
+                brother.find('.opacity-80').removeClass('opacity-80');
+                brother.addClass('active');
+
+            } else {
+                //nu exista clasa
+                var children = $stepsContainer.children().first();
+                children.addClass('active');
+                children.find('.no-border').removeClass('no-border');
+                children.find('.dark-violet').removeClass('dark-violet');
+                children.find('.opacity-80').removeClass('opacity-80');
+            }
         })
     }
 })

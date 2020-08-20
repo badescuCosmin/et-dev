@@ -246,13 +246,6 @@ body {
 }
 
 
-/* STEPS-CONTAINER */
-
-.steps-container {
-    margin-bottom: 100px;
-}
-
-
 /* INPUTS */
 
 .dotted-input-container .dotted-input-style,
@@ -290,4 +283,58 @@ body {
 
 .dotted-input-container .dotted-input-style {
     width: 394px;
+}
+
+
+/* STEPS-CONTAINER */
+
+.steps-container {
+    margin-bottom: 50px;
+}
+
+.steps-container .step-wrapper .circle {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #7c7d83;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.steps-container .step-wrapper .circle .inner-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #1170DA;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.steps-container .step-wrapper .line-wrapper {
+    padding: 0px 10px;
+}
+
+.steps-container .step-wrapper .line-wrapper .line {
+    width: 140px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #1170DA;
+    padding: 0px 5px;
+}
+
+.no-border {
+    border: 1px solid transparent!important;
+}
+
+.green-color {
+    background-color: #5FC13D !important;
+}
+
+.opacity-80 {
+    opacity: 80%;
+}
+
+.dark-violet {
+    background-color: #41436B!important;
 }
