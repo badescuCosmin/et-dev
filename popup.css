@@ -22,6 +22,7 @@ body{
     border:1px solid #979797;
     z-index: 200;
     padding:20px;
+    display: none;
 }
  .modal-container .choose-plan {
     color:#F52865;
@@ -209,5 +210,8 @@ body{
     .modal-overlay {
         display: block;
         background-color:rgba(0,0,0, .8);
+    }
+    .modal-container {
+        display: block;
     }
 }
