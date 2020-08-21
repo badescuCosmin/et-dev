@@ -1,9 +1,6 @@
 body{
     height: 100vh;
 }
-.modal {
-    padding-left: 15px;
-}
  .modal-container {
     width: 348px;
     height: 505px;
