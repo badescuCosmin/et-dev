@@ -86,67 +86,6 @@ body{
     border-bottom: 1px solid #41436B;
 }
 
-/* dublicated code import in general style sheet */
-.item-box-container .text-container {
-    padding: 1px 5px 1px 10px;
-}
-
-.item-box-container .text-style {
-    font-family: 'Roboto';
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.item-box-container .text-container .text {
-    color: #41436B;
-    width: 80%;
-}
-
-.item-box-container .price {
-    color: #717084;
-    text-align: right;
-    width: 20%;
-}
-
-.item-box-container .text-container .sub-text {
-    color: #717084;
-    font-family: 'Roboto-Regular';
-    font-size: 14px;
-    padding: 5px 0px;
-}
-
-.item-box-container .checkbox-wrapper {
-    width: 30px;
-    height: 30px;
-    margin-top: 5px;
-    background-color: #F2FAFD;
-    border-radius: 8px;
-    border: 1px solid #116fda3a;
-    cursor: pointer;
-    position: relative;
-}
-
-.item-box-container .radiobox-wrapper .circle:hover,
-.item-box-container .checkbox-wrapper:hover {
-    -webkit-box-shadow: 0px 2px 10px 0px rgba(22, 59, 157, 0.5);
-    -moz-box-shadow: 0px 2px 10px 0px rgba(22, 59, 157, 0.5);
-    box-shadow: 0px 2px 10px 0px rgba(22, 59, 157, 0.5);
-}
-
-.item-box-container .checkbox-wrapper .icon-style {
-    position: absolute;
-    top: 7px;
-    left: 6.5px;
-}
-
-.item-box-container .checkbox-wrapper .checkbox-icon-add {
-    color: #1170DA;
-}
-
-.item-box-container .checkbox-wrapper .checkbox-icon-check {
-    color: #FFFFFF;
-}
-/* *********** */
 
 /* subscription-popup */
 .subscription-card-wrapper {
@@ -164,20 +103,7 @@ body{
     margin-left: 20px;
 }
 
-.subscription-card-wrapper .text-wrapper .price {
-    font-family: 'Roboto';
-    font-weight: 700;
-    font-size: 22.4px;
-    color: #FFFFFF;
-}
 
-.subscription-card-wrapper .text-wrapper .text {
-    font-family: 'Roboto-Regular';
-    font-size: 12.8px;
-    color: #FFFFFF;
-    font-weight: 400;
-    opacity: 80%;
-}
 /* buton popup */
 
 .modal-body-container .button-popup {

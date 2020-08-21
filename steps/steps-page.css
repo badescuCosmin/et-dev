@@ -1,4 +1,3 @@
-/* btn style comes from index.css import btn in general */
 
 .main-content {
     margin-top: 74px;
@@ -25,45 +24,80 @@
     margin-top: 105px;
 }
 
-/* INPUTS */
+/* ITEM-RADIOBOX-CONTAINER */
 
-.dotted-input-container .dotted-input-style,
-.input-container .input-style {
-    width: 425px;
-    height: 47px;
+.item-box-container .radiobox-wrapper .circle {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #7170843d;
+    background-color: #F2FAFD;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-box-container .radiobox-wrapper .circle .inner-circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #53849A;
+    opacity: 40%;
+}
+
+.item-box-container .percentage-container {
+    width: 65px;
+    height: 42px;
+    /* margin: 0px 10px; */
     border-radius: 8px;
-    background-color: #ffffff;
-    border: 1px solid #7ea1c7;
-    font-family: "Roboto-Regular";
+}
+
+.item-box-container .percentage-container .percentage {
+    font-family: 'Roboto';
+    font-size: 17px;
     font-weight: 400;
-    color: #41436b;
-    font-size: 16px;
-    margin: 5px 0px;
-    -webkit-box-shadow: 0px 2px 8px 0px rgba(22, 59, 157, 0.5);
-    -moz-box-shadow: 0px 2px 8px 0px rgba(22, 59, 157, 0.5);
-    box-shadow: 0px 2px 8px 0px rgba(22, 59, 157, 0.5);
+    color: #FFFFFF;
 }
 
-.dotted-input-container .dotted-input-style:focus,
-.input-container .input-style:focus {
-    outline: none;
-    box-shadow: 0 0 15px #7ea1c7;
+.item-box-container .currency {
+    font-family: 'Roboto-Regular';
+    font-size: 12px;
+    color: #717084;
+    padding-top: 5px;
+    font-weight: 400;
 }
 
-.dotted-input-container {
-    background-color: #ffffff;
-    padding: 15px;
-    border: 1px dashed #1170da;
-    width: 425px;
-    border-radius: 8px;
-    margin: 5px 0;
+.red-color {
+    background: linear-gradient( to right top, #E33E40, #FD9164);
 }
 
-.dotted-input-container .dotted-input-style {
-    width: 394px;
+.violet-color {
+    background: linear-gradient( to right top, #6E19DD, #9A8BFE);
 }
 
-/* checkbo */
+.item-box-check-background {
+    background: linear-gradient( #9CD47D, #00BE52);
+    border: 1px solid #9CD47D !important;
+}
+
+.center-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blue-color {
+    color: #1170DA !important;
+}
+
+.padding-left-10 {
+    padding-left: 10px;
+}
+
+
+
+/* checkboxes*/
 
 /* Customize the label (the container) */
 .container-checkbox {
