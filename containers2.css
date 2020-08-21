@@ -99,9 +99,9 @@ body {
 /* ITEM-BOX-CONTAINER */
 
 .item-box-container {
-    width: 431px;
+    width: 425px;
     border-radius: 12px;
-    margin: 20px 0px;
+    margin: 12px 0px;
     padding: 10px 15px 10px 15px;
     background-color: #FFFFFF;
     border: 2px solid transparent;

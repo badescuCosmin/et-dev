@@ -1,9 +1,4 @@
 $(document).ready(function() {
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 27c49371a9a4cd49ab43d625d0775a2a428aaf08
     var $checkboxWrapper = $('.checkbox-wrapper');
     var addIcon = '<i class="fas fa-plus fa-sm icon-style checkbox-icon-add"></i>';
     var checkIcon = '<i class="fas fa-check fa-sm icon-style checkbox-icon-check"></i>';
