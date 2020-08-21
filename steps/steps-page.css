@@ -169,6 +169,10 @@
     margin-top: 142px;
 }
 
+.mb-100 {
+    margin-bottom: 0;
+}
+
 .input-container .small {
     width: 251px;
 }
@@ -188,7 +192,7 @@
     line-height: 20px;
     font-weight: 400;
     font-family: 'Roboto';
-    margin-bottom: 47px;
+    margin-bottom: 22px;
 }
 
 .step-2 .footer-info span{
@@ -243,7 +247,8 @@
 @media only screen and (max-width: 576px) {
     .dotted-input-container .dotted-input-style,
     .input-container .input-style,
-    .dotted-input-container {
+    .dotted-input-container,
+    .info-container-wrapper .inner-wrapper {
         width: 335px;
     }
     .dotted-input-container .dotted-input-style {
@@ -251,5 +256,11 @@
     }
     .container-checkbox {
         max-width: 335px;
+    }
+    .step-2 .footer-info {
+        margin-bottom: 80px;
+    }
+    .mb-100 {
+        margin-bottom: 100px;
     }
 }

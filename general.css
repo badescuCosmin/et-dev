@@ -1,4 +1,11 @@
-
+body {
+    background: linear-gradient( to right, #58abef52, #ff84003f, #ffffff);
+    /* ASTA E IMPORTANTA SA NU POATA USERUL SA IA TEXT DE PE ORICE TEXT */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 /* navbar styles */
 .navbar {
     padding: 0;
@@ -92,14 +99,7 @@
     margin-right: 10px;
 }
 
-body {
-    background: linear-gradient( to right, #58abef52, #ff84003f, #ffffff);
-    /* ASTA E IMPORTANTA SA NU POATA USERUL SA IA TEXT DE PE ORICE TEXT */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
+
 /* ITEM-BOX-CONTAINER */
 
 .item-box-container {
