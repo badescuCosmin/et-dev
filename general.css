@@ -44,6 +44,7 @@ body {
     -ms-user-select: none;
     font-family: 'Roboto';
     user-select: none;
+    margin-bottom: 100px;
 }
 
 /* navbar styles */
@@ -172,13 +173,16 @@ body {
 
 .item-box-container {
     border-radius: 12px;
-    margin: 12px 0px;
     padding: 10px 15px 10px 15px;
     background-color: var(--white-color);
     border: 2px solid transparent;
     -webkit-box-shadow: 0px 2px 10px 0px rgba(22, 59, 157, 0.5);
     -moz-box-shadow: 0px 2px 10px 0px rgba(22, 59, 157, 0.5);
     box-shadow: 0px 2px 10px 0px rgba(22, 59, 157, 0.5);
+}
+
+.item-box-container:not(:last-child) {
+    margin-bottom: 12px;
 }
 
 .item-box-container .text-container {
@@ -259,13 +263,13 @@ body {
 .input-container .input-style {
     width: 425px;
     height: 47px;
+    margin-bottom: 12px;
     border-radius: 8px;
     background-color: var(--white-color);
     border: 1px solid #7ea1c7;
     font-weight: var(--font-small-medium);
     color: var(--normal-textColor);
     font-size: var(--font16);
-    margin: 5px 0px;
     padding: 10px;
     -webkit-box-shadow: 0px 2px 8px 0px rgba(22, 59, 157, 0.5);
     -moz-box-shadow: 0px 2px 8px 0px rgba(22, 59, 157, 0.5);
@@ -281,7 +285,6 @@ body {
 .dotted-input-container {
     background-color: var(--white-color);
     padding: 15px;
-    margin: 5px 0px;
     border: 1px dashed var(--primary-color);
     width: 425px;
     border-radius: 8px;
@@ -347,6 +350,9 @@ body {
         background-color: var(--white-color);
         padding: 10px 0;
     }
+    .main-content {
+        margin-bottom:200px;
+    } 
 }
 @media only screen and (max-width: 576px) {
     .header-first {

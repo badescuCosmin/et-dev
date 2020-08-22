@@ -22,11 +22,11 @@
 .main-content .main-content-body .subscription-container {
     max-width: 430px;
 }
-.main-content .main-content-body .subscription-container h3 {
-    margin-top: 50px;
+.main-content .main-content-body .subscription-container .subscription-boxes {
     margin-bottom: 30px;
 }
-.main-content .main-content-body .subscription-container .subscription-boxes {
+.main-content .main-content-body .subscription-container h3 {
+    margin-top:32px;
     margin-bottom: 30px;
 }
 .subscription-container .subscription-details .headers-container {
@@ -45,12 +45,13 @@
 }
 
 .subscription-container .list-group-item .icon-wrapper {
-    padding: 5px;
+    padding: 5px 0;
+    padding-right: 11px;
     color: #00BE52;
 }
 
 .subscription-container .list-group-item .text-wrapper {
-    padding: 5px;
+    line-height: 32px;
     font-family: 'Roboto-Regular';
     color: #17194C;
     font-size: var(--font18);
@@ -91,10 +92,11 @@
         margin: 0 auto;
     }
     .main-content .main-content-body .subscription-container {
+        margin: 0 auto;
         max-width: 370px;
     }
-    .main-content .main-content-body .subscription-container {
-        margin: 0 auto;
+    .main-content .main-content-body .subscription-container .subscription-boxes {
+        margin-bottom: 20px;
     }
 }
 
@@ -107,10 +109,14 @@
         margin-bottom: 16px;
     }
     .main-content .main-content-body .subscription-container h3 {
-        margin-top: 40px;
         margin-bottom: 16px;
     }
     .subscription-container .subscription-details .headers-container {
         margin-bottom: 32px;
     }
+    .subscription-card-wrapper {
+        width: 124px;
+        height: 102px;
+    }
+   
 }
