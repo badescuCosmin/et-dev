@@ -21,8 +21,9 @@
     <div class="main-content container">
         <div class="container">
             <div class="row">
-                <div class="content-steps-container col-12">
-                    <div class="steps-container d-flex col-6">
+                <div class="content-steps-container col-12 p-0">
+                    <div class="steps-container d-flex col-lg-6">
+                        <div class="mx-auto d-flex">
                         <div class="step-wrapper">
                             <div class="step d-flex ">
                                 <div class="circle center-child no-border">
@@ -60,6 +61,7 @@
                             <div class="text last-step-text">Confirmare</div>
                         </div>
                     </div>
+                    </div>
                     <div class="steps-content">
                         <div class="step-content d-none-custom">
                             <div class="row">
@@ -96,7 +98,7 @@
                                             </div>
                                             <div class="btn-wrapper mt-142">
                                                 <div class="btn-mask d-none d-lg-block"></div>
-                                                <button class="button-primary">Creeaza cont</button>
+                                                <button class="button-primary" id="next">Creeaza cont</button>
                                             </div>
                                         </div>
                                     </div>
@@ -223,7 +225,7 @@
                                             </p>
                                             <div class="btn-wrapper">
                                                 <div class="btn-mask d-none d-lg-block"></div>
-                                                <button class="button-primary">Plateste <span>119.00 Ron</span></button>
+                                                <button class="button-primary" id="next">Plateste <span>119.00 Ron</span></button>
                                             </div>
                                         </div>
                                     </div>
@@ -239,15 +241,10 @@
                         </div>
                     </div>
                 </div>
-                <div style="margin:50px">
-                    <button class="btn btn-primary" id="prev">Prev</button>
-                    <button class="btn btn-success" id="next">Next</button>
-                </div>
             </div>
-
         </div>
-        <script src="steps-page.js"></script>
-        <script src="../container.js"></script>
+    <script src="steps-page.js"></script>
+    <script src="../container.js"></script>
 </body>
 
 </html>

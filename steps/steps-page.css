@@ -292,7 +292,7 @@
 }
 
 .steps-container .step-wrapper .line-wrapper .line {
-    width: 140px;
+    width: 131px;
     height: 4px;
     border-radius: 3px;
     background-color: var(--primary-color);
@@ -346,5 +346,8 @@
     }
     .mb-100 {
         margin-bottom: 100px;
+    }
+    .steps-container .step-wrapper .line-wrapper .line {
+        width: 87px;
     }
 }
