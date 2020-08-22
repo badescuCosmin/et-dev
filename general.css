@@ -18,8 +18,13 @@
     --font24: 24px;
     --font36: 36px;
 }
+/* general */
 body {
-    background: linear-gradient(to right, #58abef52, #ff84003f, var(--white-color));
+    /* background: linear-gradient(to right, #58abef52, #ff84003f, var(--white-color)); */
+    background-image: url('./assets/svg/Web\ -background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -43,11 +48,11 @@ body {
     line-height: 20px;
     display: block;
 }
-.mt-142 {
-    margin-top: 142px;
-}
 .terms-text span {
     font-weight: var(--font-medium);
+}
+.mt-142 {
+    margin-top: 142px;
 }
 
 /* navbar styles */
@@ -142,8 +147,6 @@ body {
 }
 
 /* SUBSCRIPTION-CARD */
-
-
 .subscription-card-wrapper {
     width: 161.2px;
     height: 132.6px;
@@ -171,9 +174,7 @@ body {
     opacity: 80%;
 }
 
-
 /* ITEM-BOX-CONTAINER */
-
 .item-box-container {
     border-radius: 12px;
     padding: 10px 15px 10px 15px;
@@ -183,42 +184,34 @@ body {
     -moz-box-shadow: 0px 2px 10px 0px rgba(22, 59, 157, 0.5);
     box-shadow: 0px 2px 10px 0px rgba(22, 59, 157, 0.5);
 }
-
 .item-box-container:not(:last-child) {
     margin-bottom: 12px;
 }
-
 .item-box-container .text-container {
     padding: 1px 5px 1px 10px;
 }
-
 .item-box-container .text-container .main-text {
     padding: 1px 5px;
 }
-
 .item-box-container .text-container .main-text .text-style {
     font-size: var(--font16);
     font-weight: var(--font-bold);
 }
-
 .item-box-container .text-container .text {
     color: var(--normal-textColor);
     width: 80%;
 }
-
 .item-box-container .text-container .main-text .price {
     color: #717084;
     text-align: right;
     width: 20%;
 }
-
 .item-box-container .text-container .sub-text {
     color: #717084;
     font-weight: var(--font-small-medium);
     font-size: var(--font14);
     padding: 5px 0px;
 }
-
 .item-box-container .checkbox-wrapper {
     width: 30px;
     height: 30px;
@@ -229,39 +222,32 @@ body {
     cursor: pointer;
     position: relative;
 }
-
 .item-box-container .radiobox-wrapper .circle:hover,
 .item-box-container .checkbox-wrapper:hover {
     -webkit-box-shadow: 0px 2px 10px 0px rgba(22, 59, 157, 0.5);
     -moz-box-shadow: 0px 2px 10px 0px rgba(22, 59, 157, 0.5);
     box-shadow: 0px 2px 10px 0px rgba(22, 59, 157, 0.5);
 }
-
 .item-box-container .checkbox-wrapper .icon-style {
     position: absolute;
     top: 7px;
     left: 6.5px;
 }
-
 .item-box-container .checkbox-wrapper .checkbox-icon-add {
     color: var(--primary-color);
 }
-
 .item-box-container .checkbox-wrapper .checkbox-icon-check {
     color: var(--white-color);
 }
-
 .item-box-check-background {
     background: linear-gradient(#9cd47d, #00be52);
     border: 1px solid #9cd47d !important;
 }
-
 .blue-color {
     color: var(--primary-color) !important;
 }
 
 /* INPUTS */
-
 .dotted-input-container .dotted-input-style,
 .input-container .input-style {
     width: 425px;
@@ -278,13 +264,11 @@ body {
     -moz-box-shadow: 0px 2px 8px 0px rgba(22, 59, 157, 0.5);
     box-shadow: 0px 2px 8px 0px rgba(22, 59, 157, 0.5);
 }
-
 .dotted-input-container .dotted-input-style:focus,
 .input-container .input-style:focus {
     outline: none;
     box-shadow: 0 0 15px #7ea1c7;
 }
-
 .dotted-input-container {
     background-color: var(--white-color);
     padding: 15px;
@@ -292,7 +276,6 @@ body {
     width: 425px;
     border-radius: 8px;
 }
-
 .dotted-input-container .dotted-input-style {
     width: 394px;
 }
@@ -309,12 +292,11 @@ body {
     left: 0;
     z-index: -1;
 }
-
 .button-primary {
     height: 50px;
     width: 310px;
     background: linear-gradient(to right, #1970dd, #60a7fe);
-    border: none;
+    border: 1px solid transparent;
     border-radius: 25px;
     display: block;
     margin: 0 auto;
@@ -328,6 +310,9 @@ body {
 .button-primary:focus {
     outline: 0;
     box-shadow: none;
+    background: var(--white-color);
+    border: 1px solid var(--primary-color);
+    color:var(--primary-color);
 }
 .button-primary span {
     font-weight: var(--font-light);
@@ -337,8 +322,8 @@ body {
 .btn-wrapper {
     position: relative;
 }
-/* media queries */
 
+/* media queries */
 @media only screen and (max-width: 992px) {
     .button-primary {
         width: 370px;
@@ -374,3 +359,13 @@ body {
         width: 90%;
     }
 }
+@media only screen and (max-width: 330px) {
+    .item-box-container {
+        border-radius: 12px;
+        padding: 5px 8px;
+    }
+    .item-box-container .text-container {
+        padding:1px 2px 1px 5px;
+    }
+}
+

@@ -17,7 +17,7 @@
 }
  .modal-container .choose-plan {
     color:#F52865;
-    font-size: 18px;
+    font-size: var(--font18);
     font-weight: var(--font-medium);
     line-height: 24px;
 }
@@ -45,7 +45,7 @@
 .modal-container .modal-header-container .subtitle {
     color:#717084;
     font-weight: var(--font-small-medium);
-    font-size: 14px;
+    font-size: var(--font14);
     line-height: 16px;
 }
 .modal-body-container .modal-body-title {
