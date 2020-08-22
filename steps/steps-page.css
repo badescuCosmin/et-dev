@@ -53,18 +53,16 @@
 }
 
 .item-box-container .percentage-container .percentage {
-    font-family: 'Roboto';
-    font-size: 17px;
-    font-weight: 400;
-    color: #FFFFFF;
+    font-size: var(--font16);
+    font-weight: var(--font-small-medium);
+    color: var(--white-color);
 }
 
 .item-box-container .currency {
-    font-family: 'Roboto-Regular';
-    font-size: 12px;
+    font-size: var(--font12);
     color: #717084;
     padding-top: 5px;
-    font-weight: 400;
+    font-weight: var(--font-small-medium);
 }
 
 .red-color {
@@ -87,7 +85,7 @@
 }
 
 .blue-color {
-    color: #1170DA !important;
+    color: var(--primary-color);
 }
 
 .padding-left-10 {
@@ -105,10 +103,7 @@
     padding-left: 26px;
     margin-bottom: 0px;
     cursor: pointer;
-    font-size: 14px;
-    color: #41436b;
-    font-family: "Roboto";
-    font-weight: 400;
+    color: var(--normal-textColor);
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -142,7 +137,7 @@
 }
 
 .container-checkbox input:checked ~ .checkmark {
-    background-color: #1170da;
+    background-color: var(--primary-color);
 }
 
 .container-checkbox .checkmark:after {
@@ -197,24 +192,18 @@
 }
 
 .step-2 .footer-info {
-    color:#41436B;
-    font-size: 12px;
+    color:var(--normal-textColor);
+    font-size: var(--font12);
     line-height: 20px;
-    font-weight: 400;
-    font-family: 'Roboto';
+    font-weight: var(--font-small-medium);
     margin-bottom: 22px;
 }
 
 .step-2 .footer-info span{
-    color:#1170DA;
+    color:var(--primary-color);
 }
 
 .step-2 .title {
-    color:#252D3C;
-    font-size: 18px;
-    font-family: 'Roboto';
-    font-weight: 500;
-    line-height: 24px;
     margin-bottom: 16px;
 }
 .step-2 .subscribe-pachet-details {
@@ -224,15 +213,14 @@
     justify-content: space-between;
 }
 .step-2 .subscribe-pachet-details .subscribe-text {
-    color:#41436B;
-    font-size: 16px;
-    font-family: 'Roboto';
-    font-weight: 500;
+    color:var(--normal-textColor);
+    font-size: var(--font16);
+    font-weight: var(--font-medium);
     line-height: 24px;
     margin: 0;
 }
 .step-2 .subscribe-pachet-details .change-text {
-    color:#1170DA;
+    color:var(--primary-color);
     cursor: pointer;
 }
 .step-2 .subscribe-pachet-details .change-text img {
@@ -254,11 +242,90 @@
 }
 
 .step-2 .cancel-text .pay-cancel {
-    color:#41436B;
-    font-size: 14px;
-    font-family: 'Roboto';
-    font-weight: 400;
+    color:var(--normal-textColor);
+    font-size:var(--font14);
+    font-weight:var(--font-small-medium);
     line-height: 24px;
+}
+
+/* STEPS-CONTAINER */
+
+.steps-container {
+    margin-bottom: 20px;
+}
+
+.steps-container .step-wrapper {
+    position: relative;
+}
+
+.steps-container .step-wrapper .last-step-text {
+    position: absolute;
+    right: 0px;
+}
+
+.steps-container .step-wrapper .text {
+    color: #17194C;
+    font-size: var(--font16);
+    font-weight: var(--font-small-medium);
+}
+
+.steps-container .step-wrapper .circle {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #7c7d83;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.steps-container .step-wrapper .circle .inner-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    font-size: var(--font16);
+    font-weight: var(--font-medium);
+    color: var(--white-color);
+}
+
+.steps-container .step-wrapper .line-wrapper {
+    padding: 0px 10px;
+}
+
+.steps-container .step-wrapper .line-wrapper .line {
+    width: 140px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: var(--primary-color);
+    padding: 0px 5px;
+}
+
+.no-border {
+    border: 1px solid transparent!important;
+}
+
+.bold-700 {
+    font-size: var(--font18) !important;
+    font-weight: var(--font-bold)!important;
+}
+
+.gray-color {
+    background-color: #41436b52 !important;
+}
+
+.green-color {
+    background-color: #5FC13D !important;
+}
+
+.opacity-80 {
+    opacity: 80%;
+}
+
+.dark-violet {
+    background-color: #41436B!important;
+}
+
+.d-none-custom {
+    display: none;
 }
 
 @media only screen and (max-width: 576px) {

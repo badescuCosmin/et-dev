@@ -9,7 +9,7 @@
     left:50%;
     transform: translate(-50%);
     border-radius: 14px;
-    background-color: #fff;
+    background-color: var(--white-color);
     border:1px solid #979797;
     z-index: 200;
     padding:20px;
@@ -18,8 +18,7 @@
  .modal-container .choose-plan {
     color:#F52865;
     font-size: 18px;
-    font-weight: 500;
-    font-family: 'Roboto';
+    font-weight: var(--font-medium);
     line-height: 24px;
 }
 .modal-container .close {
@@ -39,25 +38,18 @@
 }
 .modal-container .modal-header-container .title{
     color:#1E2843;
-    font-weight: 700;
-    font-family: 'Roboto';
+    font-weight: var(--font-bold);
     font-size: 22px;
     line-height: 24px;
 }
 .modal-container .modal-header-container .subtitle {
     color:#717084;
-    font-weight: 400;
-    font-family: 'Roboto';
+    font-weight: var(--font-small-medium);
     font-size: 14px;
     line-height: 16px;
 }
 .modal-body-container .modal-body-title {
     margin-top: 16px;
-    color:#252D3C;
-    font-weight: 500;
-    font-family: 'Roboto';
-    font-size: 16px;
-    line-height: 24px;
 }
 .modal-body-container .modal-body-title span {
     color:#717084;
@@ -68,7 +60,7 @@
 .item-box-container {
     width: 100%;
     padding: 0;
-    background-color: #FFFFFF;
+    background-color: var(--white-color);
     box-shadow: none;
     border-radius: 0;
 }
@@ -76,7 +68,7 @@
     margin: 20px 0px;
 }
 .item-box-container:not(:last-child) {
-    border-bottom: 1px solid #41436B;
+    border-bottom: 1px solid var(--normal-textColor);
 }
 
 
@@ -93,7 +85,7 @@
     padding:0;
 }
 .subscription-card-wrapper .text-wrapper .price {
-    font-weight: 700;
+    font-weight: var(--font-bold);
     font-size: 22.4px;
 }
 .subscription-card-wrapper .text-wrapper .text {
