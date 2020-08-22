@@ -19,6 +19,7 @@ $(document).ready(function() {
     setcheckbox();
     setRadiobox();
     setSteps();
+    $next.trigger('click');
 
     function setcheckbox() {
         $checkboxWrapper.on('click', function() {
@@ -65,8 +66,6 @@ $(document).ready(function() {
     function setSteps() {
         $next.on('click', function() {
             var firstChild = $stepsContainer.find('.active:first');
-
-
             var existLine = firstChild.find('.line-wrapper');
             var done = firstChild.hasClass('done');
             var brother = firstChild.next();
