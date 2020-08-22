@@ -9,7 +9,7 @@
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="./node_modules/roboto-fontface/css/roboto/roboto-fontface.css">
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="./containers2.css">
+    <link rel="stylesheet" href="./containers3.css">
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
 
@@ -230,65 +230,109 @@
 
     </div>
 
-    <!-- THE STEPS -->
-    <!-- <div class="container">
-        <div class="steps-container">
-            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
-                </li>
-            </ul>
-            <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">Alex are mere</div>
-                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">Cerul nu e albastru</div>
-                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">Veta e smechera</div>
-            </div>
-        </div>
-    </div> -->
-
     <div class="container">
-        <div class="steps-container d-flex">
-            <div class="step-wrapper">
-                <div class="d-flex ">
-                    <div class="circle center-child no-border">
-                        <div class="inner-circle center-child dark-violet">
-                            <div class="number opacity-80">1</div>
+        <div class="content-steps-container">
+            <div class="steps-container d-flex">
+                <div class="step-wrapper">
+                    <div class="step d-flex ">
+                        <div class="circle center-child no-border">
+                            <div class="inner-circle center-child dark-violet">
+                                <div class="number opacity-80">1</div>
+                            </div>
+                        </div>
+                        <div class="line-wrapper center-child">
+                            <span class="line gray-color"></span>
                         </div>
                     </div>
-                    <div class="line-wrapper center-child">
-                        <span class="line gray-color"></span>
-                    </div>
+                    <div class="text">Inregistrare</div>
                 </div>
-                <div class="text">Inregistrare</div>
+                <div class="step-wrapper">
+                    <div class="step d-flex ">
+                        <div class="circle center-child no-border">
+                            <div class="inner-circle center-child dark-violet">
+                                <div class="number opacity-80">2</div>
+                            </div>
+                        </div>
+                        <div class="line-wrapper center-child">
+                            <span class="line gray-color"></span>
+                        </div>
+                    </div>
+                    <div class="text">Plata</div>
+                </div>
+                <div class="step-wrapper">
+                    <div class="step d-flex ">
+                        <div class="circle center-child no-border">
+                            <div class="inner-circle center-child dark-violet">
+                                <div class="number opacity-80">3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text last-step-text">Confirmare</div>
+                </div>
             </div>
-            <div class="step-wrapper">
-                <div class="d-flex ">
-                    <div class="circle center-child no-border">
-                        <div class="inner-circle center-child dark-violet">
-                            <div class="number opacity-80">2</div>
+            <div class="steps-content">
+                <div class="step-content d-none-custom">
+                    <div class="item-box-container d-flex">
+                        <div class="radiobox-wrapper center-child">
+                            <div class="circle">
+                                <div class="inner-circle"></div>
+                            </div>
+                            <input type="radio" class="radio-style d-none" id="quarterly" name="subscription" value="quarterly">
+                        </div>
+                        <div class="text-container w-100">
+                            <div class="main-text">
+                                <span class="text text-style">Trimestrial</span>
+                                <div class="sub-text">Platesti odata la fiecare 3 luni</div>
+                            </div>
+                        </div>
+                        <div class="percentage-container center-child violet-color">
+                            <div class="percentage">10%</div>
+                        </div>
+                        <div class="padding-left-10">
+                            <span class="price text-style">117.00</span>
+                            <div class="currency">Ron/luna</div>
                         </div>
                     </div>
-                    <div class="line-wrapper center-child">
-                        <span class="line gray-color"></span>
+                </div>
+                <div class="step-content d-none-custom">
+                    <div class="input-container">
+                        <input type="text" class="input-style" value="Prenume" />
+                    </div>
+                    <div class="input-container">
+                        <input type="text" class="input-style" value="Nume" />
+                    </div>
+                    <div class="dotted-input-container">
+                        <input type="text" class="dotted-input-style" value="Dotted" />
                     </div>
                 </div>
-                <div class="text">Plata</div>
-            </div>
-            <div class="step-wrapper">
-                <div class="d-flex ">
-                    <div class="circle center-child no-border">
-                        <div class="inner-circle center-child dark-violet">
-                            <div class="number opacity-80">3</div>
+                <div class="step-content d-none-custom">
+                    <div class="item-box-container d-flex">
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" class="checkbox-style d-none">
+                            <i class="fas fa-plus fa-sm icon-style checkbox-icon-add"></i>
+                        </div>
+                        <div class="text-container w-100">
+                            <div class="main-text d-flex">
+                                <span class="text text-style">1 jucarie suplimentara</span>
+                                <span class="price text-style">+40.00</span>
+                            </div>
+                            <div class="sub-text">Vei putea alege 3 jucarii per comanda</div>
+                        </div>
+                    </div>
+                    <div class="item-box-container d-flex">
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" class="checkbox-style d-none">
+                            <i class="fas fa-plus fa-sm icon-style checkbox-icon-add"></i>
+                        </div>
+                        <div class="text-container w-100">
+                            <div class="main-text d-flex">
+                                <span class="text text-style">2 jucarie suplimentara</span>
+                                <span class="price text-style">+20.00</span>
+                            </div>
+                            <div class="sub-text">Vei putea alege 3 jucarii per comanda</div>
                         </div>
                     </div>
                 </div>
-                <div class="text">Confirmare</div>
             </div>
         </div>
         <div style="margin:50px">
@@ -296,7 +340,7 @@
             <button class="btn btn-success" id="next">Next</button>
         </div>
     </div>
-    <script src="./container.js"></script>
+    <script src="./containers2.js"></script>
 </body>
 
 </html>

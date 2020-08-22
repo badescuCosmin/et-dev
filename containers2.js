@@ -117,7 +117,6 @@ $(document).ready(function() {
             var nextStep = firstActiveStepContent.next();
 
             if (firstActiveStepContent.length !== 0) {
-                //exista clasa
                 firstActiveStepContent.removeClass('active');
                 firstActiveStepContent.addClass('d-none-custom');
                 firstActiveStepContent.removeAttr("style");
@@ -125,7 +124,6 @@ $(document).ready(function() {
                 nextStep.show('slow');
 
             } else {
-                //nu exista clasa
                 var firstActiveStepContent = $stepsContent.find('.step-content').first();
                 firstActiveStepContent.addClass('active');
                 firstActiveStepContent.show('slow');
