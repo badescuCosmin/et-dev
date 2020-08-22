@@ -19,7 +19,7 @@ $(document).ready(function() {
     setcheckbox();
     setRadiobox();
     setSteps();
-
+    
     function setcheckbox() {
         $checkboxWrapper.on('click', function() {
             const $checkContainer = $(this);

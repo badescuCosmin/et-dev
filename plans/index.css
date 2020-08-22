@@ -70,38 +70,6 @@
     font-family: 'Roboto-Regular';
     color: #17194C;
 }
-/* SUBSCRIPTION-CARD */
-
-
-.subscription-card-wrapper {
-    width: 161.2px;
-    height: 132.6px;
-    border-radius: 70% / 15%;
-    border-radius: 15.599999px 0px 15.599999px 15.599999 0px 15.599999;
-    background: linear-gradient(to right top, #0C8B9F, #20D27B);
-    -webkit-box-shadow: 0px 3px 13px 0px rgba(22, 59, 157, 0.5);
-    -moz-box-shadow: 0px 3px 13px 0px rgba(22, 59, 157, 0.5);
-    box-shadow: 0px 3px 13px 0px rgba(22, 59, 157, 0.5);
-}
-.subscription-card-wrapper .text-wrapper {
-    text-align: center;
-    padding-top: 20px;
-}
-.subscription-card-wrapper .text-wrapper .price {
-    font-family: 'Roboto';
-    font-weight: 700;
-    font-size: 36.4px;
-    color: #FFFFFF;
-}
-
-.subscription-card-wrapper .text-wrapper .text {
-    font-family: 'Roboto-Regular';
-    font-size: 20.8px;
-    color: #FFFFFF;
-    font-weight: 400;
-    opacity: 80%;
-}
-
 
 /* questions */
 .questions-container {

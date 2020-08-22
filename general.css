@@ -1,17 +1,25 @@
+:root {
+    --main-bg-color: brown;
+    --navbar-bg:rgba(255, 255, 255, 0.6);
+    --navbar-shadow: rgba(0, 69, 255, 0.07);
+}
+
 body {
-    background: linear-gradient( to right, #58abef52, #ff84003f, #ffffff);
+    background: linear-gradient(to right, #58abef52, #ff84003f, #ffffff);
     /* ASTA E IMPORTANTA SA NU POATA USERUL SA IA TEXT DE PE ORICE TEXT */
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    font-family: 'Roboto';
     user-select: none;
 }
+
 /* navbar styles */
 .navbar {
     padding: 0;
     height: 70px;
-    background-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 0 2px 10px 0 rgba(0, 69, 255, 0.07);
+    background-color: var(--navbar-bg);
+    box-shadow: 0 2px 10px 0 var(--navbar-shadow);
 }
 .mavbar .navbar-wrapper.container {
     padding: 0;
@@ -26,7 +34,6 @@ body {
     margin-right: 40px;
     color: #41436b;
     font-size: 16px;
-    font-family: "Roboto";
     font-weight: 500;
     cursor: pointer;
     position: relative;
@@ -40,8 +47,8 @@ body {
     left: 0;
     width: 100%;
 }
-.navbar .navbar-wrapper .navbar-links ul .navbar-link:hover,
-.navbar .navbar-wrapper .navbar-links ul .navbar-link.active {
+.navbar .navbar-wrapper .navbar-links ul .navbar-link a:hover,
+.navbar .navbar-wrapper .navbar-links ul .navbar-link a.active {
     color: #1170da;
 }
 .navbar .navbar-wrapper .navbar-links .navbar-links-center {
@@ -51,7 +58,7 @@ body {
     color: #41436b;
 }
 .navbar .navbar-wrapper .navbar-links ul .navbar-link a {
-   text-decoration: none;
+    text-decoration: none;
 }
 .navbar .navbar-wrapper .navbar-links .navbar-links-left .btn-navbar {
     width: 159px;
@@ -60,7 +67,6 @@ body {
     align-items: center;
     justify-content: center;
     height: 40px;
-    font-family: "Roboto";
     font-weight: 500;
     border: 1px solid #1170da;
     color: #1170da;
@@ -99,6 +105,38 @@ body {
     margin-right: 10px;
 }
 
+/* SUBSCRIPTION-CARD */
+
+
+.subscription-card-wrapper {
+    width: 161.2px;
+    height: 132.6px;
+    border-radius: 70% / 15%;
+    border-radius: 15.599999px 0px 15.599999px 15.599999 0px 15.599999;
+    background: linear-gradient(to right top, #0C8B9F, #20D27B);
+    -webkit-box-shadow: 0px 3px 13px 0px rgba(22, 59, 157, 0.5);
+    -moz-box-shadow: 0px 3px 13px 0px rgba(22, 59, 157, 0.5);
+    box-shadow: 0px 3px 13px 0px rgba(22, 59, 157, 0.5);
+}
+.subscription-card-wrapper .text-wrapper {
+    text-align: center;
+    padding-top: 20px;
+}
+.subscription-card-wrapper .text-wrapper .price {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 36.4px;
+    color: #FFFFFF;
+}
+
+.subscription-card-wrapper .text-wrapper .text {
+    font-family: 'Roboto-Regular';
+    font-size: 20.8px;
+    color: #FFFFFF;
+    font-weight: 400;
+    opacity: 80%;
+}
+
 
 /* ITEM-BOX-CONTAINER */
 
@@ -106,13 +144,12 @@ body {
     border-radius: 12px;
     margin: 12px 0px;
     padding: 10px 15px 10px 15px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border: 2px solid transparent;
     -webkit-box-shadow: 0px 2px 10px 0px rgba(22, 59, 157, 0.5);
     -moz-box-shadow: 0px 2px 10px 0px rgba(22, 59, 157, 0.5);
     box-shadow: 0px 2px 10px 0px rgba(22, 59, 157, 0.5);
 }
-
 
 .item-box-container .text-container {
     padding: 1px 5px 1px 10px;
@@ -123,14 +160,12 @@ body {
 }
 
 .item-box-container .text-container .main-text .text-style {
-    font-family: "Roboto";
     font-size: 16px;
     font-weight: 700;
 }
 
-
 .item-box-container .text-container .text {
-    color: #41436B;
+    color: #41436b;
     width: 80%;
 }
 
@@ -142,24 +177,21 @@ body {
 
 .item-box-container .text-container .sub-text {
     color: #717084;
-    font-family: 'Roboto-Regular';
+    font-weight: 400;
     font-size: 14px;
     padding: 5px 0px;
 }
-
 
 .item-box-container .checkbox-wrapper {
     width: 30px;
     height: 30px;
     margin-top: 5px;
-    background-color: #F2FAFD;
+    background-color: #f2fafd;
     border-radius: 8px;
     border: 1px solid #116fda3a;
     cursor: pointer;
     position: relative;
 }
-
-
 
 .item-box-container .radiobox-wrapper .circle:hover,
 .item-box-container .checkbox-wrapper:hover {
@@ -174,16 +206,13 @@ body {
     left: 6.5px;
 }
 
-
 .item-box-container .checkbox-wrapper .checkbox-icon-add {
-    color: #1170DA;
+    color: #1170da;
 }
 
 .item-box-container .checkbox-wrapper .checkbox-icon-check {
-    color: #FFFFFF;
+    color: #ffffff;
 }
-
-
 
 .item-box-check-background {
     background: linear-gradient(#9cd47d, #00be52);
@@ -194,8 +223,6 @@ body {
     color: #1170da !important;
 }
 
-
-
 /* INPUTS */
 
 .dotted-input-container .dotted-input-style,
@@ -203,11 +230,10 @@ body {
     width: 425px;
     height: 47px;
     border-radius: 8px;
-    background-color: #FFFFFF;
-    border: 1px solid #7EA1C7;
-    font-family: 'Roboto-Regular';
+    background-color: #ffffff;
+    border: 1px solid #7ea1c7;
     font-weight: 400;
-    color: #41436B;
+    color: #41436b;
     font-size: 16px;
     margin: 5px 0px;
     padding: 10px;
@@ -219,14 +245,14 @@ body {
 .dotted-input-container .dotted-input-style:focus,
 .input-container .input-style:focus {
     outline: none;
-    box-shadow: 0 0 15px #7EA1C7;
+    box-shadow: 0 0 15px #7ea1c7;
 }
 
 .dotted-input-container {
     background-color: #ffffff;
     padding: 15px;
     margin: 5px 0px;
-    border: 1px dashed #1170DA;
+    border: 1px dashed #1170da;
     width: 425px;
     border-radius: 8px;
 }
@@ -241,10 +267,10 @@ body {
     position: absolute;
     width: 100%;
     height: 1px;
-    background: linear-gradient( #41436B, #41436B);
-    opacity: .2;
+    background: linear-gradient(#41436b, #41436b);
+    opacity: 0.2;
     bottom: 24px;
-    left:0;
+    left: 0;
     z-index: -1;
 }
 
@@ -260,7 +286,6 @@ body {
     cursor: pointer;
     font-size: 18px;
     font-weight: 500;
-    font-family: "Roboto";
     z-index: 10;
 }
 .button-primary:hover,
@@ -299,8 +324,3 @@ body {
         width: 90%;
     }
 }
-
-
-
-
-

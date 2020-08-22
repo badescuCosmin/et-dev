@@ -21,7 +21,6 @@
     height: 602px;
     width: 424px;
     background-color: orangered;
-    margin-top: 105px;
 }
 
 /* ITEM-RADIOBOX-CONTAINER */
@@ -184,6 +183,17 @@
     height: 45px;
     margin-top: 16px;
     margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.step-2 .container-photos img:first-child {
+    height: 45px;
+    width: 151px;
+}
+.step-2 .container-photos img:nth-child(2) {
+    height: 36px;
+    width: 159px;
 }
 
 .step-2 .footer-info {
@@ -223,6 +233,12 @@
 }
 .step-2 .subscribe-pachet-details .change-text {
     color:#1170DA;
+    cursor: pointer;
+}
+.step-2 .subscribe-pachet-details .change-text img {
+    margin-right: 9px;
+    width: 14px;
+    height: 18px;
 }
 .step-2 .method-pay {
     margin-top: 20px;
