@@ -1,15 +1,6 @@
 body{
     height: 100vh;
 }
-.modal-overlay {
-    display: none;
-    position: relative;
-    top:0;
-    left:0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-}
  .modal-container {
     width: 348px;
     height: 505px;
@@ -207,10 +198,6 @@ body{
     margin-left: 15px;
 }
 @media only screen and (max-width: 576px) {
-    .modal-overlay {
-        display: block;
-        background-color:rgba(0,0,0, .8);
-    }
     .modal-container {
         display: block;
     }

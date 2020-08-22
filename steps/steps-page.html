@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="node_modules/roboto-fontface/css/roboto/roboto-fontface.css"> -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/roboto-fontface@0.10.0/css/roboto/roboto-fontface.min.css">
+    <!-- <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="steps-page.css">
+</head>
+<nav class="navbar">
+    <div class="navbar-wrapper container">
+        <div class="d-flex align-items-center">
+            <div
+                class="navbar-btn-mobile d-flex d-lg-none mr-3 mr-lg-0 justify-content-center align-items-center flex-column">
+                <span></span>
+                <span></span>
+            </div>
+            <span class="">Logo</span>
+        </div>
+        <div class="navbar-links d-flex">
+            <ul class="navbar-links-center align-items-center d-none d-lg-flex">
+                <li class="navbar-link">Toys</li>
+                <li class="navbar-link active">Mega Toys</li>
+                <li class="navbar-link">Lego</li>
+                <li class="navbar-link">Books</li>
+            </ul>
+            <ul class="navbar-links-left align-items-center d-none d-lg-flex">
+                <li class="navbar-link">Plans</li>
+                <li class="navbar-link">Sign In</li>
+                <button class="btn-navbar">Create account</button>
+            </ul>
+            <ul class="navbar-links-mobile d-flex d-lg-none">
+                <span></span>
+                <span></span>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<body>
+    <div class="main-content container">
+        <div class="row">
+            <div class="col-lg-6 info-container-wrapper">
+                <div class="inner-wrapper">
+                    <div class="info-container">
+                        <div class="steps-container">steps</div>
+                    </div>
+                    <!-- STEP 1 -->
+                    <!-- <div class="inputs-container">
+                        <div class="input-container">
+                            <input type="text" class="input-style" value="Prenume" />
+                        </div>
+                        <div class="input-container">
+                            <input type="text" class="input-style" value="Nume" />
+                        </div>
+                        <div class="input-container">
+                            <input type="text" class="input-style" value="Prenume" />
+                        </div>
+                        <div class="input-container">
+                            <input type="text" class="input-style" value="Prenume" />
+                        </div>
+                        <div class="dotted-input-container">
+                            <input type="text" class="dotted-input-style" value="Dotted" />
+                        </div>
+                        <div class="text-left mb-lg-0 mb-100">
+                            <label class="container-checkbox">
+                                Sunt de acord cu termenii si condițiile Evertoys
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container-checkbox">
+                                Sunt de acord să primesc mesaje de tip info și Newsletter de la Evertoys. No spam. Ever.
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="btn-wrapper mt-142">
+                            <div class="btn-mask d-none d-lg-block"></div>
+                            <button class="button-primary">Creeaza cont</button>
+                        </div>
+                    </div> -->
+                    <!-- <step 2 goes here -->
+                    <div class="step-2 ">
+                        <h2 class="title">Abonamentul tau</h2>
+                        <div class="subscribe-pachet-details d-flex">
+                            <p class="subscribe-text">Baza + 1 jucărie suplimentara</p>
+                            <div class="m-0">
+                                <p class='subscribe-text change-text'>Schimba</p>
+                            </div>
+                        </div>
+                        <div class="container p-0">
+                            <div class="item-box-container d-flex">
+                                <div class="radiobox-wrapper center-child">
+                                    <div class="circle">
+                                        <div class="inner-circle"></div>
+                                    </div>
+                                    <input type="radio" class="radio-style d-none" id="mountly" name="subscription"
+                                        value="mountly">
+                                </div>
+                                <div class="text-container w-100">
+                                    <div class="main-text">
+                                        <span class="text text-style">Lunar</span>
+                                        <div class="sub-text">Platesti odata pe luna</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="price text-style">130.00</span>
+                                    <div class="currency">Ron/luna</div>
+                                </div>
+                            </div>
+                            <div class="item-box-container d-flex">
+                                <div class="radiobox-wrapper center-child">
+                                    <div class="circle">
+                                        <div class="inner-circle"></div>
+                                    </div>
+                                    <input type="radio" class="radio-style d-none" id="quarterly" name="subscription"
+                                        value="quarterly">
+                                </div>
+                                <div class="text-container w-100">
+                                    <div class="main-text">
+                                        <span class="text text-style">Trimestrial</span>
+                                        <div class="sub-text">Platesti odata la fiecare 3 luni</div>
+                                    </div>
+                                </div>
+                                <div class="percentage-container center-child violet-color">
+                                    <div class="percentage">10%</div>
+                                </div>
+                                <div class="padding-left-10">
+                                    <span class="price text-style">117.00</span>
+                                    <div class="currency">Ron/luna</div>
+                                </div>
+                            </div>
+                            <div class="item-box-container d-flex">
+                                <div class="radiobox-wrapper center-child">
+                                    <div class="circle">
+                                        <div class="inner-circle"></div>
+                                    </div>
+                                    <input type="radio" class="radio-style d-none" id="annual" name="subscription"
+                                        value="annual">
+                                </div>
+                                <div class="text-container w-100">
+                                    <div class="main-text">
+                                        <span class="text text-style">Anual</span>
+                                        <div class="sub-text">Platesti un an de abonament</div>
+                                    </div>
+                                </div>
+                                <div class="percentage-container center-child red-color">
+                                    <div class="percentage">25%</div>
+                                </div>
+                                <div class="padding-left-10">
+                                    <span class="price text-style">96.50</span>
+                                    <div class="currency">Ron/luna</div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="method-pay title">Plateste cu cardul</h3>
+                        <div class="cancel-text">
+                            <i class="fas fa-check"></i>
+                            <span class="pay-cancel">Anuleaza sau suspenda plata lunara oricand</span>
+                        </div>
+                        <div class="form-inputs">
+                            <div class="input-container">
+                                <input type="text" class="input-style" value="Numar Card" />
+                            </div>
+                            <div class="input-container">
+                                <input type="text" class="input-style" value="Nume" />
+                            </div>
+                            <div class="d-flex flex-column flex-lg-row">
+                                <div class="input-container">
+                                    <input type="text" class="input-style small" value="Data expirare" />
+                                </div>
+                                <div class="input-container ml-0 ml-lg-3">
+                                    <input type="text" class="input-style xs-small" value="Cvv" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-danger container-photos">
+                        </div>
+                        <p class="footer-info">
+                            Evertoys ia foarte in serios securitatea tranzactiilor effectuate de pe acest site. Folosim
+                            unul
+                            din cei mai importanti procesatori de plati globali, Braintree Payment, o divizie a paypal.
+                            <span>verifica autenticitatea procesatorului Evertoys.</span>
+                        </p>
+                        <div class="btn-wrapper">
+                            <div class="btn-mask d-none d-lg-block"></div>
+                            <button class="button-primary">Plateste <span>119.00 Ron</span></button>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="col-lg-6  photo-container-wrapper d-none d-lg-block">
+                <div class="photo-container">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="steps-page.js"></script>
+    <script src="../container.js"></script>
+</body>
+
+</html>
