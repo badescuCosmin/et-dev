@@ -18,6 +18,15 @@
     --font24: 24px;
     --font36: 36px;
 }
+body {
+    background: linear-gradient(to right, #58abef52, #ff84003f, var(--white-color));
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    font-family: 'Roboto';
+    user-select: none;
+    margin-bottom: 100px;
+}
 .header-first {
     font-weight: var(--font-medium);
     font-size: var(--font18);
@@ -34,17 +43,11 @@
     line-height: 20px;
     display: block;
 }
+.mt-142 {
+    margin-top: 142px;
+}
 .terms-text span {
     font-weight: var(--font-medium);
-}
-body {
-    background: linear-gradient(to right, #58abef52, #ff84003f, var(--white-color));
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    font-family: 'Roboto';
-    user-select: none;
-    margin-bottom: 100px;
 }
 
 /* navbar styles */
