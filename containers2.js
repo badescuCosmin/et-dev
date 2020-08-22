@@ -19,7 +19,7 @@ $(document).ready(function() {
     setcheckbox();
     setRadiobox();
     setSteps();
-    
+
     function setcheckbox() {
         $checkboxWrapper.on('click', function() {
             const $checkContainer = $(this);
@@ -129,5 +129,61 @@ $(document).ready(function() {
                 firstActiveStepContent.show('slow');
             }
         })
+    }
+
+    //VALIDATION 
+    setInput();
+
+    function setInput() {
+        var inputsList = [{
+                id: 'name',
+                fieldLabel: 'Name',
+                required: true,
+                type: 'text',
+                maxLength: '5',
+                minLength: '3',
+                allowedCharacters: 'Alpha',
+                triggerType: 'change'
+            },
+            {
+                id: 'card',
+                fieldLabel: 'Card',
+                required: true,
+                type: 'number',
+                maxLength: '5',
+                minLength: '10',
+                allowedCharacters: 'Numeric',
+                triggerType: 'change'
+            },
+            {
+                id: 'password',
+                fieldLabel: 'Password',
+                required: false,
+                type: 'text',
+                maxLength: '5',
+                minLength: '10',
+                allowedCharacters: 'Alpha',
+                triggerType: 'change'
+            },
+            {
+                id: 'email',
+                fieldLabel: 'Email',
+                required: true,
+                type: 'text',
+                maxLength: '10',
+                minLength: '3',
+                allowedCharacters: 'AlphaNumeric',
+                isEmail: true,
+                triggerType: 'change'
+            },
+        ]
+
+
+        var options = {
+            inputsList: inputsList
+        }
+
+        var valideaza = new InputValidator(options);
+        // valideaza.setoceapa();
     }
 })

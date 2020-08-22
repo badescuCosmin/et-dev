@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="general.css">
     <link rel="stylesheet" href="containers2.css">
-    
+    <link rel="stylesheet" href="./InputValidator/InputsValidator.css">
+
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <div class="container">
+    <!-- <div class="container">
         <div class="row">
             <div class="col-lg-6">
                 <div class="subscription-container d-flex">
@@ -63,9 +64,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- QUESTIONS CONTAINER -->
-            <div class="col-lg-6">
+            </div> -->
+    <!-- QUESTIONS CONTAINER -->
+    <!-- <div class="col-lg-6">
                 <ul class="questions-container list-group">
                     <li class="list-group-item item">
                         <div class="title">
@@ -110,9 +111,9 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- ITEM-BOX-CONTAINER -->
-    <div class="container">
+    <!-- <div class="container">
         <div class="item-box-container d-flex">
             <div class="checkbox-wrapper">
                 <input type="checkbox" class="checkbox-style d-none">
@@ -152,11 +153,11 @@
                 <div class="sub-text">Vei putea alege si o jucarie din portofoliul super-premium</div>
             </div>
         </div>
-    </div>
+    </div> -->
     <hr/>
     <!-- ITEM-BOX WITH RADIOBOX -->
-    <div class="container">
-        <div class="item-box-container d-flex">
+    <!-- <div class="container">
+         <div class="item-box-container d-flex">
             <div class="radiobox-wrapper center-child">
                 <div class="circle">
                     <div class="inner-circle"></div>
@@ -216,10 +217,10 @@
                 <div class="currency">Ron/luna</div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- INPUTS -->
-    <div class="container">
+    <!-- <div class="container">
         <div class="input-container">
             <input type="text" class="input-style" value="Prenume" />
         </div>
@@ -341,8 +342,145 @@
             <button class="btn btn-primary" id="prev">Prev</button>
             <button class="btn btn-success" id="next">Next</button>
         </div>
+    </div> -->
+
+    <div class="container">
+        <div class="input-container">
+            <input type="text" class="input-style" id="name" placeholder="Name" />
+            <div class="error-input-container">
+                <span class="required-error-validation"></span>
+                <span class="characters-length-error-validation"></span>
+            </div>
+        </div>
+        <div class="input-container">
+            <input type="numeric" class="input-style" id="card" placeholder="Card" />
+            <div class="error-input-container">
+                <span class="error-validation"></span>
+            </div>
+        </div>
+        <div class="input-container">
+            <input type="text" class="input-style" id="password" placeholder="Password" />
+            <div class="error-input-container">
+                <span class="error-validation"></span>
+            </div>
+        </div>
+        <div class="input-container">
+            <input type="text" class="input-style" id="email" placeholder="Email" />
+            <div class="error-input-container">
+                <span class="required-error-validation"></span>
+                <span class="characters-length-error-validation"></span>
+                <span class="email-error-validation"></span>
+            </div>
+        </div>
+        <!-- <div class="dotted-input-container">
+            <input type="text" class="dotted-input-style" />
+        </div> -->
+
+        <div class="item-box-container d-flex">
+            <div class="radiobox-wrapper center-child">
+                <div class="circle">
+                    <div class="inner-circle"></div>
+                </div>
+                <input type="radio" class="radio-style d-none" id="mountly" name="subscription" value="mountly">
+            </div>
+            <div class="text-container w-100">
+                <div class="main-text">
+                    <span class="text text-style">Lunar</span>
+                    <div class="sub-text">Platesti odata pe luna</div>
+                </div>
+            </div>
+            <div>
+                <span class="price text-style">130.00</span>
+                <div class="currency">Ron/luna</div>
+            </div>
+        </div>
+        <div class="item-box-container d-flex">
+            <div class="radiobox-wrapper center-child">
+                <div class="circle">
+                    <div class="inner-circle"></div>
+                </div>
+                <input type="radio" class="radio-style d-none" id="quarterly" name="subscription" value="quarterly">
+            </div>
+            <div class="text-container w-100">
+                <div class="main-text">
+                    <span class="text text-style">Trimestrial</span>
+                    <div class="sub-text">Platesti odata la fiecare 3 luni</div>
+                </div>
+            </div>
+            <div class="percentage-container center-child violet-color">
+                <div class="percentage">10%</div>
+            </div>
+            <div class="padding-left-10">
+                <span class="price text-style">117.00</span>
+                <div class="currency">Ron/luna</div>
+            </div>
+        </div>
+        <div class="item-box-container d-flex">
+            <div class="radiobox-wrapper center-child">
+                <div class="circle">
+                    <div class="inner-circle"></div>
+                </div>
+                <input type="radio" class="radio-style d-none" id="annual" name="subscription" value="annual">
+            </div>
+            <div class="text-container w-100">
+                <div class="main-text">
+                    <span class="text text-style">Anual</span>
+                    <div class="sub-text">Platesti un an de abonament</div>
+                </div>
+            </div>
+            <div class="percentage-container center-child red-color">
+                <div class="percentage">25%</div>
+            </div>
+            <div class="padding-left-10">
+                <span class="price text-style">96.50</span>
+                <div class="currency">Ron/luna</div>
+            </div>
+        </div>
+        <div class="item-box-container d-flex">
+            <div class="checkbox-wrapper">
+                <input type="checkbox" class="checkbox-style d-none">
+                <i class="fas fa-plus fa-sm icon-style checkbox-icon-add"></i>
+            </div>
+            <div class="text-container w-100">
+                <div class="main-text d-flex">
+                    <span class="text text-style">1 jucarie suplimentara</span>
+                    <span class="price text-style">+40.00</span>
+                </div>
+                <div class="sub-text">Vei putea alege 3 jucarii per comanda</div>
+            </div>
+        </div>
+        <div class="item-box-container d-flex">
+            <div class="checkbox-wrapper">
+                <input type="checkbox" class="checkbox-style d-none">
+                <i class="fas fa-plus fa-sm icon-style checkbox-icon-add"></i>
+            </div>
+            <div class="text-container w-100">
+                <div class="main-text d-flex">
+                    <span class="text text-style">2 jucarie suplimentara</span>
+                    <span class="price text-style">+20.00</span>
+                </div>
+                <div class="sub-text">Vei putea alege 3 jucarii per comanda</div>
+            </div>
+        </div>
+        <div class="item-box-container d-flex">
+            <div class="checkbox-wrapper">
+                <input type="checkbox" class="checkbox-style d-none">
+                <i class="fas fa-plus fa-sm icon-style checkbox-icon-add"></i>
+            </div>
+            <div class="text-container w-100">
+                <div class="main-text d-flex">
+                    <span class="text text-style">1 jucarie suplimentara</span>
+                    <span class="price text-style">+120.00</span>
+                </div>
+                <div class="sub-text">Vei putea alege si o jucarie din portofoliul super-premium</div>
+            </div>
+        </div>
     </div>
+
+    <script src="./InputValidator/inputType.js"></script>
+    <script src="./InputValidator/InputValidator.js"></script>
     <script src="./containers2.js"></script>
+
 </body>
 
 </html>
