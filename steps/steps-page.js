@@ -64,10 +64,7 @@ $(document).ready(function() {
     }
 
     function setSteps() {
-    
             var firstChild = $stepsContainer.find('.active:first');
-
-
             var existLine = firstChild.find('.line-wrapper');
             var done = firstChild.hasClass('done');
             var brother = firstChild.next();
@@ -132,10 +129,23 @@ $(document).ready(function() {
         
     }
 
+    // go next step
+    goNextStep = (stepToValidate) => {
+        stepToValidate.validateAll();
+        stepToValidate.inputsDetails
+
+        if (stepToValidate.isValid) {
+            setSteps();
+        }
+        console.log(stepToValidate.inputsDetails)
+        console.log(stepToValidate.isValid)
+    }
+
     //VALIDATION 
     setInput();
 
     function setInput() {
+        // step1 inputs
         var step1Inputs = [{
                 id: 'lastName',
                 fieldLabel: 'Last Name',
@@ -191,7 +201,7 @@ $(document).ready(function() {
             }
 
         ]
-
+        // step2 inputs
         var step2Inputs = [
             {
                 id: 'numeCard',
@@ -235,37 +245,16 @@ $(document).ready(function() {
             },
         ]
 
+        var step1Validator = new FormValidator({inputsList:step1Inputs});
+        var step2Validator = new FormValidator({inputsList:step2Inputs});
 
-        var optionsStep1 = {
-            inputsList: step1Inputs
-        }
-        var optionsStep2 = {
-            inputsList: step2Inputs
-        }
-
-        var step1Validator = new FormValidator(optionsStep1);
-        var step2Validator = new FormValidator(optionsStep2);
 
         $("#step1Validation").on("click", function() {
-            step1Validator.validateAll();
-            step1Validator.inputsDetails
-
-            if (step1Validator.isValid) {
-                setSteps();
-            }
-            console.log(step1Validator.inputsDetails)
-            console.log(step1Validator.isValid)
+            goNextStep(step1Validator)
         })
         $("#step2Validation").on("click", function() {
-            step2Validator.validateAll();
-            step2Validator.inputsDetails
-
-            if (step2Validator.isValid) {
-                setSteps();
-            }
+            goNextStep(step2Validator)
             
         })
-
-        // valideaza.setoceapa();
     }
 })
