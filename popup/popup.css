@@ -71,7 +71,6 @@
     border-bottom: 1px solid var(--normal-textColor);
 }
 
-
 /* subscription-popup extends the general subscription in this particular case*/
 .subscription-card-wrapper {
     width: 88px;
@@ -93,14 +92,12 @@
 }
 
 /* buton popup */
-
 .modal-body-container .button-primary  {
     height: 50px;
     width: 203px;
     margin: 0;
     margin-left: auto;
 }
-
 @media only screen and (max-width: 576px) {
     .modal-container {
         display: block;

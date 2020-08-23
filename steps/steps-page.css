@@ -271,6 +271,7 @@
 .d-none-custom {
     display: none;
 }
+/* media queris */
 @media only screen and (max-width: 576px) {
     .dotted-input-container .dotted-input-style,
     .input-container .input-style,

@@ -1,7 +1,9 @@
 .error-validation {
     color: #D91020;
     font-family: 'Roboto-Regular';
-    font-size: 15px;
+    font-size: 12px;
+    height: 20px;
+    display: block;
 }
 
 .error-border {

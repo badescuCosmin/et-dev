@@ -15,6 +15,7 @@
     <!-- <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="../FormValidator/FormValidator.css">
     <link rel="stylesheet" href="steps-page.css">
 </head>
 
@@ -104,19 +105,34 @@
                     <div class="col-lg-6 info-container-wrapper">
                         <div class="inner-wrapper">
                             <div class="input-container">
-                                <input type="text" class="input-style" value="Prenume" />
+                                <input type="text" class="input-style" placeholder="Prenume" id="firstName"/>
+                                <div class="error-input-container">
+                                    <span class="error-validation"></span>
+                                </div>
                             </div>
                             <div class="input-container">
-                                <input type="text" class="input-style" value="Nume" />
+                                <input type="text" class="input-style" placeholder="Nume" id="lastName"/>
+                                <div class="error-input-container">
+                                    <span class="error-validation"></span>
+                                </div>
                             </div>
                             <div class="input-container">
-                                <input type="text" class="input-style" value="Prenume" />
+                                <input type="text" class="input-style" placeholder="Email" id="email" />
+                                <div class="error-input-container">
+                                    <span class="error-validation"></span>
+                                </div>
                             </div>
                             <div class="input-container">
-                                <input type="text" class="input-style" value="Prenume" />
+                                <input type="password" class="input-style" placeholder="Parola" id="password"/>
+                                <div class="error-input-container">
+                                    <span class="error-validation"></span>
+                                </div>
                             </div>
                             <div class="dotted-input-container">
-                                <input type="text" class="dotted-input-style" value="Dotted" />
+                                <input type="text" class="dotted-input-style" placeholder="Discount Code" id="discount"/>
+                                <div class="error-input-container">
+                                    <span class="error-validation"></span>
+                                </div>
                             </div>
                             <div class="text-left mb-lg-0 mb-100">
                                 <label class="container-checkbox ">
@@ -132,7 +148,7 @@
                             </div>
                             <div class="btn-wrapper mt-142">
                                 <div class="btn-mask d-none d-lg-block"></div>
-                                <button class="button-primary" id="next">Creeaza cont</button>
+                                <button class="button-primary" id="step1Validation">Creeaza cont</button>
                             </div>
                         </div>
                     </div>
@@ -225,17 +241,29 @@
                                 </div>
                                 <div class="form-inputs">
                                     <div class="input-container">
-                                        <input type="text" class="input-style" value="Numar Card" />
+                                        <input type="text" class="input-style" placeholder="Numar Card" id="numarCard"/>
+                                        <div class="error-input-container">
+                                            <span class="error-validation"></span>
+                                        </div>
                                     </div>
                                     <div class="input-container">
-                                        <input type="text" class="input-style" value="Nume" />
+                                        <input type="text" class="input-style" placeholder="Nume" id="numeCard" />
+                                        <div class="error-input-container">
+                                            <span class="error-validation"></span>
+                                        </div>
                                     </div>
                                     <div class="d-flex flex-column flex-sm-row">
                                         <div class="input-container">
-                                            <input type="text" class="input-style small" value="Data expirare" />
+                                            <input type="text" class="input-style small" placeholder="Data expirare" id="dataExpirare"/>
+                                            <div class="error-input-container">
+                                                <span class="error-validation"></span>
+                                            </div>
                                         </div>
                                         <div class="input-container ml-0 ml-sm-3">
-                                            <input type="text" class="input-style xs-small" value="Cvv" />
+                                            <input type="text" class="input-style xs-small" placeholder="Cvv" id="cvv"/>
+                                            <div class="error-input-container">
+                                                <span class="error-validation"></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -250,7 +278,7 @@
                                 </p>
                                 <div class="btn-wrapper">
                                     <div class="btn-mask d-none d-lg-block"></div>
-                                    <button class="button-primary" id="next">Plateste <span>119.00 Ron</span></button>
+                                    <button class="button-primary" id="step2Validation">Plateste <span>119.00 Ron</span></button>
                                 </div>
                             </div>
                         </div>
@@ -266,8 +294,9 @@
             </div>
         </div>
     </div>
-    <script src="steps-page.js"></script>
-    <script src="../container.js"></script>
+    <script src="./steps-page.js"></script>
+    <script src="../FormValidator/formValidationObjects.js"></script>
+    <script src="../FormValidator/FormValidator.js"></script>
 </body>
 
 </html>
