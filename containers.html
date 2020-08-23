@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="general.css">
     <link rel="stylesheet" href="containers2.css">
-    <link rel="stylesheet" href="./InputValidator/InputsValidator.css">
+    <link rel="stylesheet" href="./FormValidator/FormValidator.css">
 
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
@@ -348,8 +348,7 @@
         <div class="input-container">
             <input type="text" class="input-style" id="name" placeholder="Name" />
             <div class="error-input-container">
-                <span class="required-error-validation"></span>
-                <span class="characters-length-error-validation"></span>
+                <span class="error-validation"></span>
             </div>
         </div>
         <div class="input-container">
@@ -367,14 +366,14 @@
         <div class="input-container">
             <input type="text" class="input-style" id="email" placeholder="Email" />
             <div class="error-input-container">
-                <span class="required-error-validation"></span>
-                <span class="characters-length-error-validation"></span>
-                <span class="email-error-validation"></span>
+                <span class="error-validation"></span>
             </div>
         </div>
         <!-- <div class="dotted-input-container">
             <input type="text" class="dotted-input-style" />
         </div> -->
+
+        <button class="btn btn-primary" id="valideaza">Valideaza</button>
 
         <div class="item-box-container d-flex">
             <div class="radiobox-wrapper center-child">
@@ -438,7 +437,7 @@
         </div>
         <div class="item-box-container d-flex">
             <div class="checkbox-wrapper">
-                <input type="checkbox" class="checkbox-style d-none">
+                <input type="checkbox" class="checkbox-style d-none" id="oJucarie">
                 <i class="fas fa-plus fa-sm icon-style checkbox-icon-add"></i>
             </div>
             <div class="text-container w-100">
@@ -469,7 +468,7 @@
             </div>
             <div class="text-container w-100">
                 <div class="main-text d-flex">
-                    <span class="text text-style">1 jucarie suplimentara</span>
+                    <span class="text text-style">3 jucarie suplimentara</span>
                     <span class="price text-style">+120.00</span>
                 </div>
                 <div class="sub-text">Vei putea alege si o jucarie din portofoliul super-premium</div>
@@ -477,8 +476,8 @@
         </div>
     </div>
 
-    <script src="./InputValidator/inputType.js"></script>
-    <script src="./InputValidator/InputValidator.js"></script>
+    <script src="./FormValidator/formValidationObjects.js"></script>
+    <script src="./FormValidator/FormValidator.js"></script>
     <script src="./containers2.js"></script>
 
 </body>

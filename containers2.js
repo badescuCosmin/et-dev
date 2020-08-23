@@ -149,33 +149,33 @@ $(document).ready(function() {
                 id: 'card',
                 fieldLabel: 'Card',
                 required: true,
-                type: 'number',
-                maxLength: '5',
-                minLength: '10',
+                type: 'text',
+                maxLength: '10',
+                minLength: '5',
                 allowedCharacters: 'Numeric',
                 triggerType: 'change'
             },
             {
                 id: 'password',
                 fieldLabel: 'Password',
-                required: false,
-                type: 'text',
-                maxLength: '5',
-                minLength: '10',
-                allowedCharacters: 'Alpha',
-                triggerType: 'change'
+                required: true
             },
             {
                 id: 'email',
                 fieldLabel: 'Email',
                 required: true,
                 type: 'text',
-                maxLength: '10',
-                minLength: '3',
                 allowedCharacters: 'AlphaNumeric',
                 isEmail: true,
                 triggerType: 'change'
             },
+            {
+                id: 'oJucarie',
+                required: true,
+                type: 'checkbox',
+                triggerType: 'click'
+            }
+
         ]
 
 
@@ -183,7 +183,19 @@ $(document).ready(function() {
             inputsList: inputsList
         }
 
-        var valideaza = new InputValidator(options);
+        var formValidator = new FormValidator(options);
+
+        $("#valideaza").on("click", function() {
+            formValidator.validateAll();
+            formValidator.inputsDetails
+
+            if (formValidator.isValid) {
+                //go foward
+            }
+            console.log(formValidator.inputsDetails)
+            console.log(formValidator.isValid)
+        })
+
         // valideaza.setoceapa();
     }
 })

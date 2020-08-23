@@ -1,6 +1,4 @@
-.email-error-validation,
-.characters-length-error-validation,
-.required-error-validation {
+.error-validation {
     color: #D91020;
     font-family: 'Roboto-Regular';
     font-size: 15px;
