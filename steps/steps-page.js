@@ -146,6 +146,8 @@ $(document).ready(function() {
         if (stepToValidate.isValid) {
             setSteps();
         }
+        // for testing 
+        setSteps();
         console.log(stepToValidate.inputsDetails)
         console.log(stepToValidate.isValid)
     }
