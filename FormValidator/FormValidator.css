@@ -1,7 +1,6 @@
 .error-validation {
     color: #D91020;
-    font-family: 'Roboto-Regular';
-    font-size: 12px;
+    font-size: var(--font12);
     height: 20px;
     display: block;
 }

@@ -33,12 +33,17 @@ body {
     margin-bottom: 100px;
 }
 .header-first {
+    color:#1E2843;
+    font-size: var(--font24);
+    font-weight: var(--font-bold);
+}
+.header-secondary {
     font-weight: var(--font-medium);
     font-size: var(--font18);
     line-height: 24px;
     color:#252D3C;
 }
-.header-first span {
+.header-secondary span {
     color:#717084;
 }
 .terms-text {
@@ -89,7 +94,7 @@ body {
 }
 .navbar .navbar-wrapper .navbar-links ul .navbar-link a:hover,
 .navbar .navbar-wrapper .navbar-links ul .navbar-link a.active {
-    color: var(--primary-color);
+    color: var(--primary-color)!important;
 }
 .navbar .navbar-wrapper .navbar-links .navbar-links-center {
     margin-right: 80px;
@@ -340,7 +345,7 @@ body {
     } 
 }
 @media only screen and (max-width: 576px) {
-    .header-first {
+    .header-secondary {
         font-size: var(--font16);
     }
     :root {
