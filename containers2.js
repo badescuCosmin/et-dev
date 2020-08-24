@@ -149,16 +149,19 @@ $(document).ready(function() {
                 id: 'card',
                 fieldLabel: 'Card',
                 required: true,
-                type: 'text',
-                maxLength: '10',
-                minLength: '5',
-                allowedCharacters: 'Numeric',
+                type: 'number',
+                maxValue: 1000,
+                minValue: 3,
                 triggerType: 'change'
             },
             {
                 id: 'password',
                 fieldLabel: 'Password',
-                required: true
+                charactersLength: 3,
+                type: 'text',
+                required: true,
+                allowedCharacters: 'Numeric',
+                triggerType: 'change'
             },
             {
                 id: 'email',
@@ -171,10 +174,25 @@ $(document).ready(function() {
             },
             {
                 id: 'oJucarie',
+                parent: 'checkbox-wrapper',
                 required: true,
                 type: 'checkbox',
                 triggerType: 'click'
-            }
+            },
+            {
+                id: 'douaJucarie',
+                parent: 'checkbox-wrapper',
+                required: true,
+                type: 'checkbox',
+                triggerType: 'click'
+            },
+
+            {
+                id: 'conditii',
+                required: true,
+                type: 'checkbox',
+                triggerType: 'click'
+            },
 
         ]
 

@@ -29,7 +29,7 @@ var FormValidator = (function() {
                             var value = $(`#${input.id}`).val();
                             var $parentContainer = $(`#${input.id}`).parent();
                             var numberOfCharacters = value.replace(/ /g, '').length;
-                            _setValidationForTextInput.apply(this, [input, $parentContainer, numberOfCharacters, value]);
+                            _setValidationForTextInput.apply(self, [input, $parentContainer, numberOfCharacters, value]);
                             self.inputsDetails.push({
                                 id: input.id,
                                 value: value,
@@ -39,7 +39,28 @@ var FormValidator = (function() {
                         }
                     case inputType.number:
                         {
-                            _setValidationForNumberInput.apply(this, [input]);
+                            var value = $(`#${input.id}`).val();
+                            var $parentContainer = $(`#${input.id}`).parent();
+                            _setValidationForNumberInput.apply(self, [input, $parentContainer, value]);
+                            self.inputsDetails.push({
+                                id: input.id,
+                                value: value,
+                                isValid: input.isValid
+                            })
+                            break;
+                        }
+
+                    case inputType.checkbox:
+                        {
+                            var value = $(`#${input.id}`).val();
+                            _setValidationForCheckboxInput.apply(self, [input, $parentContainer, value]);
+                            self.inputsDetails.push({
+                                id: input.id,
+                                value: value,
+                                isValid: input.isValid
+                            })
+
+                            console.log("the input is ", input);
                             break;
                         }
                     default:
@@ -52,22 +73,27 @@ var FormValidator = (function() {
     }
 
     FormValidator.prototype.setValidateByTriggerType = function(input) {
+        var self = this;
         if (input) {
             if (input.triggerType) {
                 switch (input.triggerType) {
                     case triggerType.keypress:
                         {
-                            this.setKeypressTrigger(input);
+                            self.setKeypressTrigger(input);
                             break;
                         }
+                    case triggerType.click:
+                        {
+                            self.setOnClickTrigger(input);
+                        }
                     default:
-                        this.setOnChangeTrigger(input);
+                        self.setOnChangeTrigger(input);
                 }
             }
 
-            if (input.type === inputType.checkbox) {
-                _setOnClickTrigger.apply(this, [input])
-            }
+            // if (input.type === inputType.checkbox) {
+            //     self.setOnClickTrigger(input);
+            // }
         }
     }
 
@@ -82,10 +108,20 @@ var FormValidator = (function() {
         })
     }
 
-    function _setOnClickTrigger(input) {
-        $(`#${input.id}`).on('click', function() {
-            var value = this.value;
-            _setValidationForCheckboxInput.apply(this, [input, value]);
+    FormValidator.prototype.setOnClickTrigger = function(input) {
+        var self = this;
+        var $domElement = $({});
+        if (input.parent) {
+            $domElement = $(`#${input.id}`).parents(`.${input.parent}`);
+        } else {
+            $domElement = $(`#${input.id}`);
+        }
+
+        $domElement.on('click', function() {
+            var value = $(`#${input.id}`).val();
+
+
+            _setValidationForCheckboxInput.apply(self, [input, value]);
         })
     }
 
@@ -93,20 +129,19 @@ var FormValidator = (function() {
         var self = this;
         $(`#${input.id}`).on('change', function() {
             {
+                var value = this.value;
+                var $parentContainer = $(this).parent();
                 if (input.type) {
                     switch (input.type) {
                         case inputType.text:
                             {
-                                var value = this.value;
-                                var $parentContainer = $(this).parent();
                                 var numberOfCharacters = value.replace(/ /g, '').length;
-
-                                _setValidationForTextInput.apply(this, [input, $parentContainer, numberOfCharacters, value]);
+                                _setValidationForTextInput.apply(self, [input, $parentContainer, numberOfCharacters, value]);
                                 break;
                             }
                         case inputType.number:
                             {
-                                _setValidationForNumberInput.apply(this, [input]);
+                                _setValidationForNumberInput.apply(self, [input, $parentContainer, value]);
                                 break;
                             }
                         default:
@@ -121,6 +156,7 @@ var FormValidator = (function() {
     function _setValidationForTextInput(input, $parentContainer, numberOfCharacters, value) {
         input.ErrorMessages = [];
         _getRequiredValidation(value, input);
+        _getCharactersLengthValidation(input, numberOfCharacters);
         _getEmailValidation(input, value);
         _getAllowedCharactersValidation(input, value);
         _getMinCharactersValidation(input, numberOfCharacters);
@@ -128,20 +164,25 @@ var FormValidator = (function() {
         _setInputValidation.apply(this, [input, $parentContainer])
     }
 
-    function _setValidationForNumberInput(input) {
-
+    function _setValidationForNumberInput(input, $parentContainer, value) {
+        input.ErrorMessages = [];
+        _getRequiredValidation(value, input);
+        _getAllowedDigitsValidation(input, value);
+        _getMinAndMaxValueValidation(input, value);
+        _setInputValidation.apply(this, [input, $parentContainer])
     }
 
     function _setValidationForCheckboxInput(input, value) {
         input.ErrorMessages = [];
-        console.log("_setValidationForCheckboxInput");
-        if (input.required) {
-            if (!$(`#${input.id}`).is(':checked')) {
-                console.log('E NEAPARATA NEVOIE DE EEAAA');
-            } else {
-                console.log('E APASATA');
-            }
+        if ($(`#${input.id}`).is(':checked')) {
+            _getRequiredValidation(value, input);
+        } else {
+            value = "";
+            _getRequiredValidation(value, input);
         }
+
+        var $parentContainer = $(`#${input.id}`).parents(`.${boxMainContainer}`);
+        _setInputValidation.apply(this, [input, $parentContainer])
     }
 
     function _setValidationForRadioBoxInput(input) {
@@ -150,6 +191,7 @@ var FormValidator = (function() {
 
     function _setInputValidation(input, $parentContainer) {
         var errorMessage = "";
+
         if (input.ErrorMessages.length > 0) {
             errorMessage = input.ErrorMessages[0];
             $(`.${errorValidation}`, $parentContainer).text(errorMessage);
@@ -180,6 +222,27 @@ var FormValidator = (function() {
         }
     }
 
+    function _getAllowedDigitsValidation(input, value) {
+        var errorMessage = "";
+
+        console.log("input, value", input, value);
+        if (input.allowedCharacters) {
+            if (input.allowedCharacters === charactersType.numeric) {
+                console.log("sssssssssssssssssssssssssssss");
+                if (value) {
+                    var pattern = /^[^0-9]*$/i;
+                    var isvalid = _isValueValid(value, pattern);
+                    if (!isvalid) {
+                        errorMessage = validationMesages.getAllowedDigitsErrorMessage();
+                    }
+                }
+                if (errorMessage) {
+                    input.ErrorMessages.push(errorMessage);
+                }
+            }
+        }
+    }
+
     function _getRequiredValidation(value, input) {
         var errorMessage = "";
         if (input.required) {
@@ -194,7 +257,7 @@ var FormValidator = (function() {
 
     function _getMinCharactersValidation(input, numberOfCharacters) {
         var errorMessage = "";
-        if (input.minLength || input.minLength && input.maxLength) {
+        if (input.minLength && input.maxLength) {
             if (input.minLength > numberOfCharacters && numberOfCharacters !== 0) {
                 errorMessage = validationMesages.getMinCharactersErrorMessage(input.minLength);
             }
@@ -216,6 +279,39 @@ var FormValidator = (function() {
                 if (!isvalid) {
                     errorMessage = validationMesages.getEmailErrorMessage();
                 }
+            }
+            if (errorMessage) {
+                input.ErrorMessages.push(errorMessage);
+            }
+        }
+    }
+
+    function _getMinAndMaxValueValidation(input, value) {
+        var errorMessage = "";
+        if (input.maxValue || input.minValue) {
+            if (value) {
+                if (value < input.minValue) {
+                    errorMessage = validationMesages.getMinValueErrorMessage(input.minValue);
+                }
+                if (value > input.maxValue) {
+                    errorMessage = validationMesages.getMaxValueErrorMessage(input.maxValue);
+                }
+                if (errorMessage) {
+                    input.ErrorMessages.push(errorMessage);
+                }
+            }
+        }
+    }
+
+
+    function _getCharactersLengthValidation(input, numberOfCharacters) {
+        var errorMessage = "";
+        console.log("intra cicisada", input.charactersLength);
+        if (input.charactersLength > 0) {
+
+            console.log("intra caaaat");
+            if (input.charactersLength !== numberOfCharacters) {
+                errorMessage = validationMesages.getCharactersLengthErrorMessage(input.charactersLength);
             }
             if (errorMessage) {
                 input.ErrorMessages.push(errorMessage);

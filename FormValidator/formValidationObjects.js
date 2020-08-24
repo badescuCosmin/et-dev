@@ -18,6 +18,7 @@ var triggerType = {
 }
 
 var displayNone = "d-none";
+var boxMainContainer = "box-main-container";
 var errorInputContainer = "error-input-container";
 var errorValidation = "error-validation";
 var errorBorder = "error-border";
@@ -45,3 +46,26 @@ validationMesages.getEmailErrorMessage = function() {
 validationMesages.getAllowedAplhaCharactersErrorMessage = function() {
     return `Enter only alphabetical letters`;
 }
+
+validationMesages.getAllowedDigitsErrorMessage = function() {
+    return `Enter only digits`;
+}
+
+validationMesages.getMaxValueErrorMessage = function(maxValue) {
+    return `The maximum value is ${maxValue}`;
+}
+
+validationMesages.getMinValueErrorMessage = function(minValue) {
+    return `The minimum value is ${minValue}`;
+}
+
+validationMesages.getCharactersLengthErrorMessage = function(length) {
+    return `Characters length required is ${length}`;
+}
+
+
+
+//chestii de precizat
+// orice checkbox are mandatory parent-ul, adica ala de apesi pe el sa fie checkbox-ul selectat;
+//orice chechbox/radiobox trebuie sa aiba neaparat ca si main container clasa .box-main-container
+//probleme, nu face by default trigger verificaaaa Alexxx
