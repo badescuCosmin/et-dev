@@ -59,7 +59,16 @@ body {
 .mt-142 {
     margin-top: 142px;
 }
-
+.info-container-wrapper .inner-wrapper {
+    width: 424px;
+    margin: 0 auto;
+}
+.photo-container-wrapper .photo-container {
+    height: 402px;
+    width: 424px;
+    background-color: orangered;
+    border-radius: 12px;
+}
 /* navbar styles */
 .navbar {
     padding: 0;
@@ -252,8 +261,8 @@ body {
 /* INPUTS */
 .dotted-input-container .dotted-input-style,
 .input-container .input-style {
-    width: 425px;
     height: 47px;
+    width: 100%;
     margin-bottom: 0;
     border-radius: 8px;
     background-color: var(--white-color);
@@ -275,11 +284,7 @@ body {
     background-color: var(--white-color);
     padding: 15px;
     border: 1px dashed var(--primary-color);
-    width: 425px;
     border-radius: 8px;
-}
-.dotted-input-container .dotted-input-style {
-    width: 394px;
 }
 
 /* primary btn styless */
@@ -354,14 +359,26 @@ body {
       --font36:28px;
       --font20:16px;
     }
+    .info-container-wrapper .inner-wrapper {
+        width: 335px;
+    }
 }
-
 @media only screen and (max-width: 400px) {
     .button-primary {
         width: 90%;
     }
 }
+/* media queris */
+
+@media only screen and (max-width: 362px) {
+    .info-container-wrapper .inner-wrapper {
+        width: 300px;
+    }
+}
 @media only screen and (max-width: 330px) {
+    .info-container-wrapper .inner-wrapper {
+        width: 280px;
+    }
     .item-box-container {
         border-radius: 12px;
         padding: 5px 8px;
