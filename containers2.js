@@ -1,8 +1,5 @@
 $(document).ready(function() {
     var $checkboxWrapper = $('.checkbox-wrapper');
-
-    var $itemBoxContainer = $('.item-box-container');
-
     var addIcon = '<i class="fas fa-plus fa-sm icon-style checkbox-icon-add"></i>';
     var checkIcon = '<i class="fas fa-check fa-sm icon-style checkbox-icon-check"></i>';
     var radioIcon = '<i class="fas fa-check fa-sm icon-style radiobox-icon exist" style = "color: #FFF !important"></i>';
@@ -13,6 +10,8 @@ $(document).ready(function() {
     var displayNone = 'd-none';
     var $radioboxWrapper = $('.radiobox-wrapper');
     var $itemBoxContainer = $('.item-box-container');
+    var $boxMainContainer = $('.box-main-container');
+    var $itemRadioBoxContainer = $('.item-radio-box-container', $boxMainContainer);
     var $radioCircle = $('.circle', $radioboxWrapper);
     //STEPS
     var $prev = $('#prev');
@@ -48,14 +47,13 @@ $(document).ready(function() {
     }
 
     function setRadiobox() {
-        $radioCircle.on('click', function() {
-            const $circle = $(this);
-            const $parentContainer = $circle.parent().parent();
+        $itemRadioBoxContainer.on('click', function(e) {
+            const $circle = $(this).find('.circle');
+            const $wrapper = $(this).find('.radiobox-wrapper');
             const $innerCircle = $circle.children().first();
-            const $radioInput = $circle.siblings();
-            $radioInput.trigger('click');
-            $itemBoxContainer.find("span").removeClass(blueColorClass)
-            $parentContainer.find("span").addClass(blueColorClass)
+            $("input", $wrapper).prop("checked", true);
+            $itemRadioBoxContainer.find("span").removeClass(blueColorClass);
+            $(this).find("span").addClass(blueColorClass);
             $('.radiobox-icon', $radioboxWrapper).remove();
             $radioCircle.removeClass(checkBackground);
             $('.inner-circle', $radioboxWrapper).removeClass(displayNone);
@@ -189,14 +187,14 @@ $(document).ready(function() {
             },
             {
                 id: 'oJucarie',
-                parent: 'checkbox-wrapper',
+                parent: 'item-box-container',
                 required: true,
                 type: 'checkbox',
                 triggerType: 'click'
             },
             {
                 id: 'douaJucarie',
-                parent: 'checkbox-wrapper',
+                parent: 'item-box-container',
                 fieldLabel: 'Jucarie box',
                 required: true,
                 type: 'checkbox',
