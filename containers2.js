@@ -1,5 +1,8 @@
 $(document).ready(function() {
     var $checkboxWrapper = $('.checkbox-wrapper');
+
+    var $itemBoxContainer = $('.item-box-container');
+
     var addIcon = '<i class="fas fa-plus fa-sm icon-style checkbox-icon-add"></i>';
     var checkIcon = '<i class="fas fa-check fa-sm icon-style checkbox-icon-check"></i>';
     var radioIcon = '<i class="fas fa-check fa-sm icon-style radiobox-icon exist" style = "color: #FFF !important"></i>';
@@ -21,8 +24,8 @@ $(document).ready(function() {
     setSteps();
 
     function setcheckbox() {
-        $checkboxWrapper.on('click', function() {
-            const $checkContainer = $(this);
+        $itemBoxContainer.on('click', function() {
+            const $checkContainer = $(this).find('.checkbox-wrapper');
             const $parentContainer = $checkContainer.parent();
             const $checkbox = $checkContainer.children().first('input');
             const icon = $checkContainer.find('i');
