@@ -248,6 +248,7 @@ body {
 
 /* INPUTS */
 
+.dropdown-input-container .dropdown-input-style,
 .dotted-input-container .dotted-input-style,
 .input-container .input-style {
     width: 425px;
@@ -266,6 +267,7 @@ body {
     box-shadow: 0px 2px 8px 0px rgba(22, 59, 157, 0.5);
 }
 
+.dropdown-input-container .dropdown-input-style,
 .dotted-input-container .dotted-input-style:focus,
 .input-container .input-style:focus {
     outline: none;
@@ -283,6 +285,11 @@ body {
 
 .dotted-input-container .dotted-input-style {
     width: 394px;
+}
+
+.dropdown-input-container select option {
+    margin: 40px;
+    border-radius: 16px;
 }
 
 

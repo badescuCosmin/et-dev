@@ -152,6 +152,7 @@ $(document).ready(function() {
                 type: 'number',
                 maxValue: 1000,
                 minValue: 3,
+                allowedCharacters: 'Numeric',
                 triggerType: 'change'
             },
             {
@@ -159,16 +160,27 @@ $(document).ready(function() {
                 fieldLabel: 'Password',
                 charactersLength: 3,
                 type: 'text',
+                allowedCharacters: 'AlphaNumeric',
                 required: true,
-                allowedCharacters: 'Numeric',
-                triggerType: 'change'
+
+            },
+            {
+                id: 'list',
+                fieldLabel: 'List',
+                type: 'dropdown',
+                required: true
+            },
+            {
+                id: 'list2',
+                fieldLabel: 'List 2',
+                type: 'dropdown',
+                required: true
             },
             {
                 id: 'email',
                 fieldLabel: 'Email',
                 required: true,
                 type: 'text',
-                allowedCharacters: 'AlphaNumeric',
                 isEmail: true,
                 triggerType: 'change'
             },
@@ -182,17 +194,27 @@ $(document).ready(function() {
             {
                 id: 'douaJucarie',
                 parent: 'checkbox-wrapper',
+                fieldLabel: 'Jucarie box',
                 required: true,
                 type: 'checkbox',
                 triggerType: 'click'
             },
-
             {
                 id: 'conditii',
                 required: true,
                 type: 'checkbox',
                 triggerType: 'click'
             },
+            {
+                name: 'subscription',
+                parent: 'radiobox-wrapper',
+                required: true,
+                type: 'radiobox',
+                triggerType: 'click'
+            },
+
+
+
 
         ]
 

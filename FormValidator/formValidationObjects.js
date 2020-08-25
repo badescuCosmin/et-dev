@@ -2,7 +2,8 @@ var inputType = {
     number: "number",
     text: "text",
     checkbox: "checkbox",
-    radiobox: "radiobox"
+    radiobox: "radiobox",
+    dropdown: "dropdown"
 }
 
 var charactersType = {
@@ -50,6 +51,11 @@ validationMesages.getAllowedAplhaCharactersErrorMessage = function() {
 validationMesages.getAllowedDigitsErrorMessage = function() {
     return `Enter only digits`;
 }
+
+validationMesages.getAllowedAlphaNumericErrorMessage = function() {
+    return `Enter only letters and digits, no other characters are allowed`;
+}
+
 
 validationMesages.getMaxValueErrorMessage = function(maxValue) {
     return `The maximum value is ${maxValue}`;

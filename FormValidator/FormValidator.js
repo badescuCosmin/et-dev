@@ -49,22 +49,31 @@ var FormValidator = (function() {
                             })
                             break;
                         }
-
-                    case inputType.checkbox:
+                    case inputType.dropdown:
                         {
                             var value = $(`#${input.id}`).val();
-                            _setValidationForCheckboxInput.apply(self, [input, $parentContainer, value]);
+                            var $parentContainer = $(`#${input.id}`).parent();
+                            _setValidationForDropdown.apply(self, [input, $parentContainer, value]);
                             self.inputsDetails.push({
                                 id: input.id,
                                 value: value,
                                 isValid: input.isValid
                             })
-
-                            console.log("the input is ", input);
+                            break;
+                        }
+                    case inputType.checkbox:
+                        {
+                            var value = $(`#${input.id}`).val();
+                            _setValidationForCheckboxInput.apply(self, [input, value]);
+                            self.inputsDetails.push({
+                                id: input.id,
+                                value: value,
+                                isValid: input.isValid
+                            })
                             break;
                         }
                     default:
-                        console.log('no type');
+                        console.log(`Type doesn't exist`);
                 }
             }
         })
@@ -75,20 +84,18 @@ var FormValidator = (function() {
     FormValidator.prototype.setValidateByTriggerType = function(input) {
         var self = this;
         if (input) {
-            if (input.triggerType) {
-                switch (input.triggerType) {
-                    case triggerType.keypress:
-                        {
-                            self.setKeypressTrigger(input);
-                            break;
-                        }
-                    case triggerType.click:
-                        {
-                            self.setOnClickTrigger(input);
-                        }
-                    default:
-                        self.setOnChangeTrigger(input);
-                }
+            switch (input.triggerType) {
+                case triggerType.keypress:
+                    {
+                        self.setKeypressTrigger(input);
+                        break;
+                    }
+                case triggerType.click:
+                    {
+                        self.setOnClickTrigger(input);
+                    }
+                default:
+                    self.setOnChangeTrigger(input);
             }
 
             // if (input.type === inputType.checkbox) {
@@ -100,10 +107,7 @@ var FormValidator = (function() {
     FormValidator.prototype.setKeypressTrigger = function(input) {
         $(`#${input.id}`).on('keypress', function() {
             {
-                // console.log('On keypress');
-                // var self = $(this);
-                // var value = this.value;
-                // _setRequiredValidation(self, value, input);
+                //CODE IN PROGRESS
             }
         })
     }
@@ -118,10 +122,18 @@ var FormValidator = (function() {
         }
 
         $domElement.on('click', function() {
-            var value = $(`#${input.id}`).val();
-
-
-            _setValidationForCheckboxInput.apply(self, [input, value]);
+            if (input.type) {
+                switch (input.type) {
+                    case inputType.checkbox:
+                        {
+                            var value = $(`#${input.id}`).val();
+                            _setValidationForCheckboxInput.apply(self, [input, value]);
+                            break;
+                        }
+                    default:
+                        console.log(`Type doesn't exist`);
+                }
+            }
         })
     }
 
@@ -144,26 +156,37 @@ var FormValidator = (function() {
                                 _setValidationForNumberInput.apply(self, [input, $parentContainer, value]);
                                 break;
                             }
+                        case inputType.dropdown:
+                            {
+                                _setValidationForDropdown.apply(self, [input, $parentContainer, value]);
+                                break;
+                            }
+                        case inputType.radiobox:
+                            {
+                                _setValidationForRadioBoxInput
+                                break;
+                            }
                         default:
-                            console.log('no type');
+                            console.log(`Type doesn't exist`);
                     }
                 }
-                console.log("The input is", input);
             }
         })
     }
 
+    //TEXT INPUT
     function _setValidationForTextInput(input, $parentContainer, numberOfCharacters, value) {
         input.ErrorMessages = [];
         _getRequiredValidation(value, input);
-        _getCharactersLengthValidation(input, numberOfCharacters);
         _getEmailValidation(input, value);
         _getAllowedCharactersValidation(input, value);
+        _getAllowedAlphaNumericValidation(input, value);
+        _getCharactersLengthValidation(input, numberOfCharacters);
         _getMinCharactersValidation(input, numberOfCharacters);
-        //ADD THE ERROR MESSAGE ON UI
         _setInputValidation.apply(this, [input, $parentContainer])
     }
 
+    //NUMBER INPUT
     function _setValidationForNumberInput(input, $parentContainer, value) {
         input.ErrorMessages = [];
         _getRequiredValidation(value, input);
@@ -172,6 +195,14 @@ var FormValidator = (function() {
         _setInputValidation.apply(this, [input, $parentContainer])
     }
 
+    //DROPDOWN SELECT
+    function _setValidationForDropdown(input, $parentContainer, value) {
+        input.ErrorMessages = [];
+        _getRequiredValidation(value, input);
+        _setInputValidation.apply(this, [input, $parentContainer])
+    }
+
+    //CHECKBOX
     function _setValidationForCheckboxInput(input, value) {
         input.ErrorMessages = [];
         if ($(`#${input.id}`).is(':checked')) {
@@ -185,13 +216,14 @@ var FormValidator = (function() {
         _setInputValidation.apply(this, [input, $parentContainer])
     }
 
+    //RADIOBOX
     function _setValidationForRadioBoxInput(input) {
 
     }
 
+    //ADD THE ERROR MESSAGE ON UI
     function _setInputValidation(input, $parentContainer) {
         var errorMessage = "";
-
         if (input.ErrorMessages.length > 0) {
             errorMessage = input.ErrorMessages[0];
             $(`.${errorValidation}`, $parentContainer).text(errorMessage);
@@ -224,21 +256,50 @@ var FormValidator = (function() {
 
     function _getAllowedDigitsValidation(input, value) {
         var errorMessage = "";
-
-        console.log("input, value", input, value);
         if (input.allowedCharacters) {
             if (input.allowedCharacters === charactersType.numeric) {
-                console.log("sssssssssssssssssssssssssssss");
-                if (value) {
-                    var pattern = /^[^0-9]*$/i;
-                    var isvalid = _isValueValid(value, pattern);
-                    if (!isvalid) {
-                        errorMessage = validationMesages.getAllowedDigitsErrorMessage();
-                    }
+                var patternDigits = /^[0-9-+()]*$/;
+                var patternLetters = /^[a-zA-Z]*$/i;
+                var isvalidDigits = _isValueValid(value, patternDigits);
+                var isvalidLetters = _isValueValid(value, patternLetters);
+                if ((!isvalidLetters && !isvalidDigits) || !isvalidDigits) {
+                    errorMessage = validationMesages.getAllowedDigitsErrorMessage();
                 }
                 if (errorMessage) {
                     input.ErrorMessages.push(errorMessage);
                 }
+            }
+        }
+    }
+
+    function _getAllowedAlphaNumericValidation(input, value) {
+        var errorMessage = "";
+        if (input.allowedCharacters) {
+            if (input.allowedCharacters === charactersType.alphaNumeric) {
+                var pattern = /^[a-zA-Z0-9 ]+$/;
+                var isvalid = _isValueValid(value, pattern);
+                if (!isvalid) {
+                    errorMessage = validationMesages.getAllowedAlphaNumericErrorMessage();
+                }
+                if (errorMessage) {
+                    input.ErrorMessages.push(errorMessage);
+                }
+            }
+        }
+    }
+
+    function _getEmailValidation(input, value) {
+        var errorMessage = "";
+        if (input.isEmail) {
+            if (value) {
+                var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+                var isvalid = _isValueValid(value, pattern);
+                if (!isvalid) {
+                    errorMessage = validationMesages.getEmailErrorMessage();
+                }
+            }
+            if (errorMessage) {
+                input.ErrorMessages.push(errorMessage);
             }
         }
     }
@@ -270,22 +331,6 @@ var FormValidator = (function() {
         }
     }
 
-    function _getEmailValidation(input, value) {
-        var errorMessage = "";
-        if (input.isEmail) {
-            if (value) {
-                var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
-                var isvalid = _isValueValid(value, pattern);
-                if (!isvalid) {
-                    errorMessage = validationMesages.getEmailErrorMessage();
-                }
-            }
-            if (errorMessage) {
-                input.ErrorMessages.push(errorMessage);
-            }
-        }
-    }
-
     function _getMinAndMaxValueValidation(input, value) {
         var errorMessage = "";
         if (input.maxValue || input.minValue) {
@@ -303,13 +348,9 @@ var FormValidator = (function() {
         }
     }
 
-
     function _getCharactersLengthValidation(input, numberOfCharacters) {
         var errorMessage = "";
-        console.log("intra cicisada", input.charactersLength);
         if (input.charactersLength > 0) {
-
-            console.log("intra caaaat");
             if (input.charactersLength !== numberOfCharacters) {
                 errorMessage = validationMesages.getCharactersLengthErrorMessage(input.charactersLength);
             }
