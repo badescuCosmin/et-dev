@@ -292,6 +292,14 @@ body {
     border-radius: 16px;
 }
 
+.date-input-container {
+    width: 425px;
+}
+
+.date-input-container .date-input {
+    border-radius: 8px !important;
+}
+
 
 /* STEPS-CONTAINER */
 

@@ -66,8 +66,6 @@ $(document).ready(function() {
     function setSteps() {
         $next.on('click', function() {
             var firstChild = $stepsContainer.find('.active:first');
-
-
             var existLine = firstChild.find('.line-wrapper');
             var done = firstChild.hasClass('done');
             var brother = firstChild.next();
@@ -77,10 +75,8 @@ $(document).ready(function() {
             }
 
             if (firstChild.length !== 0) {
-                //exista clasa
                 if (existLine.length != 0) {
                     firstChild.removeClass('active');
-
                 } else {
                     firstChild.addClass('done');
                 }
@@ -101,9 +97,7 @@ $(document).ready(function() {
                 brother.addClass('active');
                 brother.find('.text').addClass('blue-color');
                 brother.find('.text').addClass('bold-700');
-
             } else {
-                //nu exista clasa
                 var children = $stepsContainer.find('.step-wrapper').first();
                 children.addClass('active');
                 children.find('.text').addClass('blue-color');
@@ -136,6 +130,20 @@ $(document).ready(function() {
     setInput();
 
     function setInput() {
+
+        $('#dateInput').datepicker({
+            format: "mm/yy",
+            startView: "months",
+            minViewMode: "months",
+        });
+
+        inputRestrictor.setInputOnlyWithDigits("cvv");
+        inputRestrictor.setInputWithExactCharactersLength("cvv", 3);
+        //
+        inputRestrictor.setInputOnlyWithDigits("card");
+        inputRestrictor.setInputWithExactCharactersLength("card", 16);
+        inputRestrictor.putSpaceAfterNumberOfCharacters("card", 4);
+
         var inputsList = [{
                 id: 'name',
                 fieldLabel: 'Name',
@@ -149,11 +157,24 @@ $(document).ready(function() {
             {
                 id: 'card',
                 fieldLabel: 'Card',
+                charactersLength: 16,
                 required: true,
-                type: 'number',
-                maxValue: 1000,
-                minValue: 3,
-                allowedCharacters: 'Numeric',
+                type: 'text',
+                triggerType: 'change'
+            },
+
+            {
+                id: 'cvv',
+                fieldLabel: 'CVV',
+                charactersLength: 3,
+                required: true,
+                type: 'text',
+            },
+            {
+                id: 'dateInput',
+                fieldLabel: 'Date',
+                required: true,
+                type: 'text',
                 triggerType: 'change'
             },
             {

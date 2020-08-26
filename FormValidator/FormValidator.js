@@ -218,7 +218,7 @@ var FormValidator = (function() {
 
     //RADIOBOX
     function _setValidationForRadioBoxInput(input) {
-
+        //CODE IN PROGRESS
     }
 
     //ADD THE ERROR MESSAGE ON UI
