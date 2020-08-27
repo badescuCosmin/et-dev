@@ -280,7 +280,4 @@
     .steps-container .step-wrapper .line-wrapper .line {
         width: 59px;
     }
-    .step-2 .container-photos img:first-child {
-        display: none;
-    }
 }

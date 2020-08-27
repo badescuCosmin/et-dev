@@ -30,7 +30,7 @@ body {
     -ms-user-select: none;
     font-family: 'Roboto';
     user-select: none;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 }
 .header-first {
     color:#1E2843;
@@ -69,6 +69,52 @@ body {
     background-color: orangered;
     border-radius: 12px;
 }
+
+.error-validation {
+    color: #D91020;
+    font-size: var(--font12);
+    height: 20px;
+    display: block;
+}
+
+.error-border {
+    border: 1px solid #D91020 !important;
+}
+
+.modal-container {
+    width: 348px;
+    position: absolute;
+    top: 101px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 14px;
+    background-color: var(--white-color);
+    border: 1px solid #979797;
+    z-index: 200;
+    padding: 20px;
+}
+.modal-container .choose-plan {
+    color: #f52865;
+    font-size: var(--font18);
+    font-weight: var(--font-medium);
+    line-height: 24px;
+}
+.modal-container .close:hover,
+.modal-container .close:focus {
+    outline: 0;
+}
+.modal-body-container .button-primary {
+    height: 50px;
+    width: 203px;
+    margin: 0;
+    margin-left: auto;
+}
+@media only screen and (max-width: 576px) {
+    .modal-container {
+        display: block;
+    }
+}
+
 /* navbar styles */
 .navbar {
     padding: 0;
