@@ -126,23 +126,57 @@ $(document).ready(function() {
         })
     }
 
+
+    //ABONEAZA-TE ACUM BUTTON
+    setButton();
+
+    function setButton() {
+        var price = '.price';
+        var $abonament = $("#abonament");
+        var itemBoxContainer = '.item-box-container';
+        var boxesIds = ["oJucarie", "douaJucarie"];
+        var boxesValue = 0;
+        var buttonValue = parseFloat($abonament.find('span:first').text());
+
+        boxesIds.forEach(function(itemId) {
+            var $input = $(`#${itemId}`);
+            var $parent = $input.parents(itemBoxContainer);
+            $parent.on('click', function() {
+                var $price = $(this).find(price);
+                var str = $price.text();
+                var stringPrice = str.substring(1);
+                var priceValue = parseFloat(stringPrice);
+                if ($input.is(':checked')) {
+                    boxesValue = boxesValue + priceValue;
+                } else {
+                    boxesValue = boxesValue - priceValue;
+                }
+                $abonament.find('span:first').text(buttonValue + boxesValue);
+            })
+        })
+    }
+
     //VALIDATION 
     setInput();
 
     function setInput() {
 
-        $('#dateInput').datepicker({
-            format: "mm/yy",
-            startView: "months",
-            minViewMode: "months",
-        });
+        // $('#dateInput').datepicker({
+        //     format: "mm/yy",
+        //     startView: "months",
+        //     minViewMode: "months",
+        // });
 
         inputRestrictor.setInputOnlyWithDigits("cvv");
         inputRestrictor.setInputWithExactCharactersLength("cvv", 3);
         //
         inputRestrictor.setInputOnlyWithDigits("card");
         inputRestrictor.setInputWithExactCharactersLength("card", 16);
-        inputRestrictor.putSpaceAfterNumberOfCharacters("card", 4);
+        inputRestrictor.putCharacterAfterNumberOfCharacters("card", " ", 4);
+        //date
+        inputRestrictor.setInputOnlyWithDigits("dateInput");
+        inputRestrictor.setInputWithExactCharactersLength("dateInput", 5);
+        inputRestrictor.putCharacterAfterNumberOfCharacters("dateInput", "/", 2);
 
         var inputsList = [{
                 id: 'name',
@@ -173,6 +207,7 @@ $(document).ready(function() {
             {
                 id: 'dateInput',
                 fieldLabel: 'Date',
+                charactersLength: 5,
                 required: true,
                 type: 'text',
                 triggerType: 'change'

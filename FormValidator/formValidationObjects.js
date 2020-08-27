@@ -41,7 +41,7 @@ validationMesages.getMaxCharactersErrorMessage = function(min, max) {
 }
 
 validationMesages.getEmailErrorMessage = function() {
-    return `Is is not a valid e-mail address`;
+    return `Invalid e-mail address`;
 }
 
 validationMesages.getAllowedAplhaCharactersErrorMessage = function() {

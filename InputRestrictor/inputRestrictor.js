@@ -17,11 +17,11 @@ var inputRestrictor = {};
         });
     }
 
-    inputRestrictor.putSpaceAfterNumberOfCharacters = function(inputId, numberOfCharacters) {
+    inputRestrictor.putCharacterAfterNumberOfCharacters = function(inputId, character, numberOfCharacters) {
         $(`#${inputId}`).keyup(function() {
-            var partOfValue = $(this).val().split(" ").join("");
+            var partOfValue = $(this).val().split(character).join("");
             if (partOfValue.length > 0) {
-                partOfValue = partOfValue.match(new RegExp(`.{1,${numberOfCharacters}}`, 'g')).join(" ");
+                partOfValue = partOfValue.match(new RegExp(`.{1,${numberOfCharacters}}`, 'g')).join(character);
             }
             $(this).val(partOfValue);
         });

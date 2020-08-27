@@ -371,8 +371,8 @@ var FormValidator = (function() {
         return isValid;
     }
 
-    function _isValueValid(emailAddress, pattern) {
-        return pattern.test(emailAddress);
+    function _isValueValid(value, pattern) {
+        return pattern.test(value);
     }
 
 
