@@ -241,7 +241,7 @@ var FormValidator = (function() {
         if (input.allowedCharacters) {
             if (input.allowedCharacters === charactersType.alpha) {
                 if (value) {
-                    var pattern = /^[a-zA-Z]*$/i;
+                    var pattern = /^[a-zA-Z ]*$/i;
                     var isvalid = _isValueValid(value, pattern);
                     if (!isvalid) {
                         errorMessage = validationMesages.getAllowedAplhaCharactersErrorMessage();
