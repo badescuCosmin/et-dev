@@ -219,7 +219,6 @@ $(document).ready(function() {
                 type: 'text',
                 allowedCharacters: 'AlphaNumeric',
                 required: true,
-
             },
             {
                 id: 'list',

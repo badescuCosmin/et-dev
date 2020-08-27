@@ -57,13 +57,21 @@
                     <div class="container p-0 d-flex flex-column mt-40">
                         <div class="row">
                             <div class="col-6 input-container">
-                                <input type="text" class="input-style " placeholder="Prenume" id="firstName" />
-                                <div class="error-input-container">
-                                    <span class="error-validation"></span>
+                                <div class="dropdown-input-container">
+                                    <select class="dropdown-input-style" id="oras">
+                                        <option value="" disabled selected hidden>Oras</option>
+                                        <option class="dropdown-option" value="volvo">Volvo</option>
+                                        <option class="dropdown-option" value="saab">Saab</option>
+                                        <option class="dropdown-option" value="opel">Opel</option>
+                                        <option class="dropdown-option" value="audi">Audi</option>
+                                      </select>
+                                    <div class="error-input-container">
+                                        <span class="error-validation"></span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-6 input-container pl-0">
-                                <input type="text" class="input-style" placeholder="Nume" id="lastName" />
+                                <input type="text" class="input-style" placeholder="Zip Code" id="zipCode" />
                                 <div class="error-input-container">
                                     <span class="error-validation"></span>
                                 </div>
@@ -71,13 +79,13 @@
                         </div>
                         <div class="row">
                             <div class="col-9 input-container">
-                                <input type="text" class="input-style " placeholder="Prenume" id="firstName" />
+                                <input type="text" class="input-style " placeholder="Strada" id="strada" />
                                 <div class="error-input-container">
                                     <span class="error-validation"></span>
                                 </div>
                             </div>
                             <div class="col-3 input-container pl-0">
-                                <input type="text" class="input-style" placeholder="Nume" id="lastName" />
+                                <input type="text" class="input-style" placeholder="Numar" id="numar" />
                                 <div class="error-input-container">
                                     <span class="error-validation"></span>
                                 </div>
@@ -109,7 +117,7 @@
                         </h3>
                         <div class="btn-wrapper">
                             <div class="btn-mask d-none d-lg-block"></div>
-                            <button class="button-primary">Plateste <span>119.00 Ron</span></button>
+                            <button class="button-primary" id='addressValidation'>Plateste <span>119.00 Ron</span></button>
                         </div>
                     </div>
                 </div>
@@ -119,6 +127,11 @@
             </div>
         </div>
     </div>
+    <script src="../InputRestrictor/inputRestrictor.js"></script>
+    <script src="../FormValidator/formValidationObjects.js"></script>
+    <script src="../FormValidator/FormValidator.js"></script>
+    <script src="adresaLivrare.js"></script>
+    <script src='../general.js'></script>
 </body>
 
 </html>

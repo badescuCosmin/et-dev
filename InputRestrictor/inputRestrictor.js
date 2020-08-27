@@ -9,6 +9,7 @@ var inputRestrictor = {};
         });
     }
     inputRestrictor.setInputWithExactCharactersLength = function(inputId, charactersLength) {
+        
         $(`#${inputId}`).on('keypress', function(e) {
             var value = this.value.replace(/ /g, '').length;
             if (value === charactersLength) {
