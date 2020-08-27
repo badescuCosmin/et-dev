@@ -193,6 +193,9 @@ var FormValidator = (function() {
         _getAllowedDigitsValidation(input, value);
         _getMinAndMaxValueValidation(input, value);
         _setInputValidation.apply(this, [input, $parentContainer])
+
+
+
     }
 
     //DROPDOWN SELECT
