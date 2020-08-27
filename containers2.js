@@ -161,11 +161,11 @@ $(document).ready(function() {
 
     function setInput() {
 
-        // $('#dateInput').datepicker({
-        //     format: "mm/yy",
-        //     startView: "months",
-        //     minViewMode: "months",
-        // });
+        $('#dateInput2').datepicker({
+            format: "mm/yy",
+            startView: "months",
+            minViewMode: "months",
+        });
 
         inputRestrictor.setInputOnlyWithDigits("cvv");
         inputRestrictor.setInputWithExactCharactersLength("cvv", 3);
