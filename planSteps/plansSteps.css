@@ -1,6 +1,6 @@
 /* grid styles */
 .main-content {
-    margin-top: 74px;
+    margin-top: 154px;
 }
 
 /* step2 styles */
@@ -144,10 +144,6 @@
     -ms-user-select: none;
     user-select: none;
     width: 100%;
-}
-.container-checkbox:not(:last-child) {
-    margin-bottom: 15px;
-    margin-top: 17px;
 }
 .container-checkbox input {
     position: absolute;

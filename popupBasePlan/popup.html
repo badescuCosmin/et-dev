@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../general.css">
     <link rel="stylesheet" href="popup.css">
 </head>
+
 <body>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
         works in mobile mode
@@ -50,56 +51,60 @@
                     <h3 class="header-secondary modal-body-title">Poți adăuga <span>(Opțional)</span></h3>
                     <div class="options-container">
                         <div class="container p-0">
-                            <div class="item-box-container d-flex">
-                                <div class="checkbox-wrapper">
-                                    <input type="checkbox" class="checkbox-style d-none">
-                                    <i class="fas fa-plus fa-sm icon-style checkbox-icon-add"></i>
-                                </div>
-                                <div class="text-container w-100">
-                                    <div class="main-text d-flex">
-                                        <span class="text text-style">1 jucarie suplimentara</span>
-                                        <span class="price text-style">+40.00</span>
+                            <div class="subscription-boxes">
+                                <div class="item-box-container d-flex">
+                                    <div class="checkbox-wrapper">
+                                        <input type="checkbox" class="checkbox-style d-none" id='box1'>
+                                        <i class="fas fa-plus fa-sm icon-style checkbox-icon-add"></i>
                                     </div>
-                                    <div class="sub-text">Vei putea alege 3 jucarii per comanda</div>
-                                </div>
-                            </div>
-                            <div class="item-box-container d-flex">
-                                <div class="checkbox-wrapper">
-                                    <input type="checkbox" class="checkbox-style d-none">
-                                    <i class="fas fa-plus fa-sm icon-style checkbox-icon-add"></i>
-                                </div>
-                                <div class="text-container w-100">
-                                    <div class="main-text d-flex">
-                                        <span class="text text-style">2 jucarie suplimentara</span>
-                                        <span class="price text-style">+20.00</span>
+                                    <div class="text-container w-100">
+                                        <div class="main-text d-flex">
+                                            <span class="text text-style">1 jucarie suplimentara</span>
+                                            <span class="price text-style">+40.00</span>
+                                        </div>
+                                        <div class="sub-text">vei putea alege 3 jucării per comandă</div>
                                     </div>
-                                    <div class="sub-text">Vei putea alege 3 jucarii per comanda</div>
                                 </div>
-                            </div>
-                            <div class="item-box-container d-flex">
-                                <div class="checkbox-wrapper">
-                                    <input type="checkbox" class="checkbox-style d-none">
-                                    <i class="fas fa-plus fa-sm icon-style checkbox-icon-add"></i>
-                                </div>
-                                <div class="text-container w-100">
-                                    <div class="main-text d-flex">
-                                        <span class="text text-style">1 jucarie suplimentara</span>
-                                        <span class="price text-style">+120.00</span>
+                                <div class="item-box-container d-flex">
+                                    <div class="checkbox-wrapper">
+                                        <input type="checkbox" class="checkbox-style d-none" id='box2'>
+                                        <i class="fas fa-plus fa-sm icon-style checkbox-icon-add"></i>
                                     </div>
-                                    <div class="sub-text">Vei putea alege si o jucarie din portofoliul super-premium
+                                    <div class="text-container w-100">
+                                        <div class="main-text d-flex">
+                                            <span class="text text-style">2 jucarie suplimentara</span>
+                                            <span class="price text-style">+20.00</span>
+                                        </div>
+                                        <div class="sub-text">vei putea alege 3 cărți per comandă</div>
+                                    </div>
+                                </div>
+                                <div class="item-box-container d-flex">
+                                    <div class="checkbox-wrapper">
+                                        <input type="checkbox" class="checkbox-style d-none" id='box3'>
+                                        <i class="fas fa-plus fa-sm icon-style checkbox-icon-add"></i>
+                                    </div>
+                                    <div class="text-container w-100">
+                                        <div class="main-text d-flex">
+                                            <span class="text text-style">1 jucarie suplimentara</span>
+                                            <span class="price text-style">+120.00</span>
+                                        </div>
+                                        <div class="sub-text">vei putea alege și o jucărie din portofoliul super-premium
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <button class="button-primary" id='btn-cta'>Change <span>119.00 Ron</span></button>
+                        <button class="button-primary" id='abonament'>Change<span>130.00</span><span>Ron</span></button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-<script src='../steps/steps-page.js'></script>
+<script src="../GeneralMethods/generalMethods.js"></script>
+<script src='popup.js'></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
+
 </html>

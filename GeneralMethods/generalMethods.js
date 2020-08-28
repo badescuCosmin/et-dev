@@ -1,6 +1,8 @@
 var generalMethods = {};
 
 (function() {
+     var $itemRadioBoxContainer = $('.item-radio-box-container', $boxMainContainer);
+    var $boxMainContainer = $('.box-main-container');
     var addIcon = '<i class="fas fa-plus fa-sm icon-style checkbox-icon-add"></i>';
     var checkIcon = '<i class="fas fa-check fa-sm icon-style checkbox-icon-check"></i>';
     var radioIcon = '<i class="fas fa-check fa-sm icon-style radiobox-icon exist" style = "color: #FFF !important"></i>';
@@ -11,15 +13,12 @@ var generalMethods = {};
     var displayNone = 'd-none';
     var $radioboxWrapper = $('.radiobox-wrapper');
     var $itemBoxContainer = $('.item-box-container');
-    var $boxMainContainer = $('.box-main-container');
-    var $itemRadioBoxContainer = $('.item-radio-box-container', $boxMainContainer);
     var $radioCircle = $('.circle', $radioboxWrapper);
     var $stepsContainer = $('.steps-container');
     var $stepsContent = $('.steps-content');
 
     generalMethods.setCheckbox = function() {
-
-        $itemBoxContainer.on('click', function() {
+        $itemBoxContainer.on('click', function () {
             const $checkContainer = $(this).find('.checkbox-wrapper');
             const $parentContainer = $checkContainer.parent();
             const $checkbox = $checkContainer.children().first('input');
@@ -119,4 +118,49 @@ var generalMethods = {};
             firstActiveStepContent.show('slow');
         }
     }
+    generalMethods.goNextStep = function(stepToValidate){
+        stepToValidate.validateAll();
+        stepToValidate.inputsDetails
+
+        if (stepToValidate.isValid) {
+
+            console.log("intra");
+            this.setSteps();
+        }
+        // // for testing 
+        console.log(stepToValidate.inputsDetails)
+        console.log(stepToValidate.isValid)
+    };
+    generalMethods.setButton = function(){
+        var $abonament = $("#abonament");
+        var price = '.price';
+        var itemBoxContainer = '.item-box-container';
+        var boxesIds = ["box1", "box2", "box3"];
+        var boxesValue = 0;
+        var buttonValue = parseFloat($abonament.find('span:first').text());
+
+        boxesIds.forEach(function(itemId) {
+            var $input = $(`#${itemId}`);
+            var $parent = $input.parents(itemBoxContainer);
+            $parent.on('click', function() {
+                var $price = $(this).find(price);
+                var str = $price.text();
+                var stringPrice = str.substring(1);
+                var priceValue = parseFloat(stringPrice);
+                if ($input.is(':checked')) {
+                    boxesValue = boxesValue + priceValue;
+                } else {
+                    boxesValue = boxesValue - priceValue;
+                }
+                $abonament.find('span:first').text(parseInt(buttonValue + boxesValue).toFixed(2));
+            })
+        })
+    }
+    $(".navbar-link").click(function () {
+        var listItems = $(".navbar-link");
+        for (let i = 0; i < listItems.length; i++) {
+            listItems[i].classList.remove("active");
+        }
+        this.classList.add("active");
+    });
 }());
