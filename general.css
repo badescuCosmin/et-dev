@@ -238,6 +238,7 @@ body {
 
 /* ITEM-BOX-CONTAINER */
 .item-box-container {
+    cursor: pointer;
     border-radius: 12px;
     padding: 10px 15px 10px 15px;
     background-color: var(--white-color);

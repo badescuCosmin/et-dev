@@ -32,5 +32,5 @@ $(document).ready(function () {
         })
     };
     generalMethods.setButton();
-    $abonament.on('click', ()=>window.location = '../steps/steps.html');
+    $abonament.on('click', ()=>window.location = '../planSteps/plansSteps.html');
 });
