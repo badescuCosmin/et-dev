@@ -107,7 +107,6 @@ $(document).ready(function() {
             setSteps();
         }
         // // for testing 
-        setSteps();
         console.log(stepToValidate.inputsDetails)
         console.log(stepToValidate.isValid)
     }
@@ -134,10 +133,8 @@ $(document).ready(function() {
                     id: 'lastName',
                     fieldLabel: 'Last Name',
                     required: true,
+                    minLength:5,
                     type: 'text',
-                    maxLength: '5',
-                    minLength: '3',
-                    allowedCharacters: 'Alpha',
                     triggerType: 'change'
                 },
                 {
@@ -145,8 +142,6 @@ $(document).ready(function() {
                     fieldLabel: 'First Name',
                     required: true,
                     type: 'text',
-                    maxLength: '10',
-                    minLength: '5',
                     allowedCharacters: 'Numeric',
                     triggerType: 'change'
                 },
@@ -155,9 +150,8 @@ $(document).ready(function() {
                     fieldLabel: 'Password',
                     required: true,
                     type: 'text',
-                    maxLength: '12',
                     minLength: '7',
-                    allowedCharacters: 'Numeric',
+                    allowedCharacters: 'AlfaNumeric',
                     triggerType: 'change'
                 },
                 {

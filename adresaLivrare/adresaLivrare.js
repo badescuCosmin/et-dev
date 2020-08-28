@@ -17,18 +17,10 @@ $(document).ready(function () {
     }
 
     function setInput() {
+        inputRestrictor.setInputOnlyWithDigits("phone");
         inputRestrictor.setInputOnlyWithDigits("zipCode");
         inputRestrictor.setInputWithExactCharactersLength("zipCode", 6);
-
-        inputRestrictor.setInputWithExactCharactersLength("dataExpirare", 5);
-        //
-        inputRestrictor.setInputOnlyWithDigits("numarCard");
-        inputRestrictor.setInputWithExactCharactersLength("numarCard", 16);
-        inputRestrictor.putCharacterAfterNumberOfCharacters("numarCard", " ", 4);
-        //date
-        inputRestrictor.setInputOnlyWithDigits("dataExpirare");
-        inputRestrictor.setInputWithExactCharactersLength("dataExpirare", 5);
-        inputRestrictor.putCharacterAfterNumberOfCharacters("dataExpirare", "/", 2);
+        inputRestrictor.setInputWithExactCharactersLength("phone", 10);
         // step1 inputs
         var step1Inputs = [
             {
@@ -57,6 +49,30 @@ $(document).ready(function () {
                 type: 'text',
                 allowedCharacters: 'AlphaNumeric',
                 required: true,
+            },
+            {
+                id: 'fullAdress',
+                fieldLabel: 'Adresa Completa',
+                required: true,
+                type: 'text',
+                allowedCharacters: 'AlphaNumeric',
+                triggerType: 'change'
+            },
+            {
+                id: 'name',
+                fieldLabel: 'Name',
+                required: true,
+                type: 'text',
+                allowedCharacters: 'Alpha',
+                triggerType: 'change'
+            },
+            {
+                id: 'phone',
+                fieldLabel: 'Phone',
+                required: true,
+                type: 'text',
+                charactersLength: 10,
+                triggerType: 'change'
             }
         ]
         // step2 inputs

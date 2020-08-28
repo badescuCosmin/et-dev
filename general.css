@@ -373,10 +373,14 @@ body {
     border: 1px solid var(--primary-color);
     color:var(--primary-color);
 }
-.button-primary span {
+.button-primary span{
     font-weight: var(--font-light);
     font-size:var(--font16);
+   
+}
+.button-primary span:nth-child(1){
     margin-left: 20px;
+    margin-right: 3px;
 }
 .btn-wrapper {
     position: relative;

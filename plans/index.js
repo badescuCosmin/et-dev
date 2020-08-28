@@ -1,10 +1,10 @@
 $(document).ready(function() {
-
+    var $abonament = $("#abonament");
     setButton();
 
     function setButton() {
         var price = '.price';
-        var $abonament = $("#abonament");
+      
         var itemBoxContainer = '.item-box-container';
         var boxesIds = ["box1", "box2", "box3"];
         var boxesValue = 0;
@@ -23,9 +23,11 @@ $(document).ready(function() {
                 } else {
                     boxesValue = boxesValue - priceValue;
                 }
-                $abonament.find('span:first').text(buttonValue + boxesValue);
+                $abonament.find('span:first').text(parseInt(buttonValue + boxesValue).toFixed(2));
             })
         })
     }
+
+    $abonament.on('click', ()=>window.location = '../steps/steps.html')
 
 })
