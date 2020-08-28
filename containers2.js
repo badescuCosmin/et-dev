@@ -65,10 +65,8 @@ $(document).ready(function() {
                 fieldLabel: 'Name',
                 required: true,
                 type: 'text',
-                maxLength: '5',
                 minLength: '3',
-                allowedCharacters: 'Alpha',
-                triggerType: 'change'
+                allowedCharacters: 'AlphaNumeric'
             },
             {
                 id: 'card',
