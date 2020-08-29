@@ -35,7 +35,7 @@ $(document).ready(function() {
                     fieldLabel: 'Password',
                     required: true,
                     type: 'text',
-                    minLength: '4',
+                    minLength: '3',
                     allowedCharacters: 'AlfaNumeric',
                 },
                 {
