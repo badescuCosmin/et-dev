@@ -89,10 +89,10 @@ $(document).ready(function() {
 
             {
                 id: 'cvv',
-                fieldLabel: 'Cvv',
+                fieldLabel: 'C',
                 required: true,
                 type: 'text',
-                minLength: '3',
+                charactersLength: 3,
                 allowedCharacters: 'Numeric'
             },
         ]
