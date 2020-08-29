@@ -11,9 +11,8 @@
 }
 
 .modal-body-container .description .description-img {
-    background-color: red;
     height: 55px;
-    width: 66px;
+    width: 36px;
 }
 .modal-body-container .description-info {
     font-size: var(--font14);

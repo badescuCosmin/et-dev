@@ -66,10 +66,8 @@ body {
     width: 424px;
     margin: 0 auto;
 }
-.photo-container-wrapper .photo-container {
-    height: 402px;
+.photo-container-wrapper .photo-container img {
     width: 424px;
-    background-color: orangered;
     border-radius: 12px;
 }
 .error-validation {
@@ -127,8 +125,12 @@ body {
     width: 100%;
     z-index: 10000;
 }
-.mavbar .navbar-wrapper.container {
+.navbar .navbar-wrapper.container {
     padding: 0;
+}
+.navbar .navbar-wrapper.container img {
+    cursor: pointer;
+    width: 120px;
 }
 .navbar .navbar-wrapper .navbar-links ul {
     list-style: none;

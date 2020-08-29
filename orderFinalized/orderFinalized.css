@@ -65,13 +65,12 @@
 .info-container-wrapper .inner-wrapper .details-box .box-content {
     color:var(--normal-textColor);
 }
-.info-container-wrapper .inner-wrapper .box-image {
+.info-container-wrapper .inner-wrapper .box-image img{
+    display: block;
     margin: 0 auto;
     margin-top: 68px;
     margin-bottom: 0;
     width: 200px;
-    height: 200px;
-    background-color: red;
 }
 .info-container-wrapper .inner-wrapper .support {
     font-weight: var(--font-medium);
