@@ -1,21 +1,22 @@
 var generalMethods = {};
 
 (function() {
-     var $itemRadioBoxContainer = $('.item-radio-box-container', $boxMainContainer);
-    var $boxMainContainer = $('.box-main-container');
-    var addIcon = '<i class="fas fa-plus fa-sm icon-style checkbox-icon-add"></i>';
-    var checkIcon = '<i class="fas fa-check fa-sm icon-style checkbox-icon-check"></i>';
-    var radioIcon = '<i class="fas fa-check fa-sm icon-style radiobox-icon exist" style = "color: #FFF !important"></i>';
-    var checkBackground = 'item-box-check-background';
-    var solidBlueBorder = '2px solid #1170DA';
-    var transparentBorder = '2px solid transparent';
-    var blueColorClass = 'blue-color';
-    var displayNone = 'd-none';
-    var $radioboxWrapper = $('.radiobox-wrapper');
-    var $itemBoxContainer = $('.item-box-container');
-    var $radioCircle = $('.circle', $radioboxWrapper);
-    var $stepsContainer = $('.steps-container');
-    var $stepsContent = $('.steps-content');
+    var $itemRadioBoxContainer = $('.item-radio-box-container', $boxMainContainer),
+        $boxMainContainer = $('.box-main-container'),
+        $navbarLink = $('.navbar-link'),
+        addIcon = '<i class="fas fa-plus fa-sm icon-style checkbox-icon-add"></i>',
+        checkIcon = '<i class="fas fa-check fa-sm icon-style checkbox-icon-check"></i>',
+        radioIcon = '<i class="fas fa-check fa-sm icon-style radiobox-icon exist" style = "color: #FFF !important"></i>',
+        checkBackground = 'item-box-check-background',
+        solidBlueBorder = '2px solid #1170DA',
+        transparentBorder = '2px solid transparent',
+        blueColorClass = 'blue-color',
+        displayNone = 'd-none',
+        $radioboxWrapper = $('.radiobox-wrapper'),
+        $itemBoxContainer = $('.item-box-container'),
+        $radioCircle = $('.circle', $radioboxWrapper),
+        $stepsContainer = $('.steps-container'),
+        $stepsContent = $('.steps-content');
 
     generalMethods.setCheckbox = function() {
         $itemBoxContainer.on('click', function () {
@@ -121,15 +122,10 @@ var generalMethods = {};
     generalMethods.goNextStep = function(stepToValidate){
         stepToValidate.validateAll();
         stepToValidate.inputsDetails
-
         if (stepToValidate.isValid) {
-
             console.log("intra");
             this.setSteps();
         }
-        // // for testing 
-        console.log(stepToValidate.inputsDetails)
-        console.log(stepToValidate.isValid)
     };
     generalMethods.setButton = function(){
         var $abonament = $("#abonament");
@@ -156,11 +152,13 @@ var generalMethods = {};
             })
         })
     }
-    $(".navbar-link").click(function () {
-        var listItems = $(".navbar-link");
-        for (let i = 0; i < listItems.length; i++) {
-            listItems[i].classList.remove("active");
-        }
-        this.classList.add("active");
-    });
+    generalMethods.getNavigation = function(){
+        $navbarLink.on('click',function () {
+            var listItems = $navbarLink;
+            for (let i = 0; i < listItems.length; i++) {
+                listItems[i].classList.remove("active");
+            }
+            this.classList.add("active");
+        });
+    }
 }());

@@ -1,24 +1,7 @@
 $(document).ready(function () {
     generalMethods.setSteps();
     generalMethods.setRadiobox();
-    (function setRadioButton() {
-        var price = '.price';
-        var itemBoxContainer = '.item-radio-box-container';
-        var $parent = $('input[name=subscription]').parents(itemBoxContainer);
-
-        var $step2Validation = $("#step2Validation");
-        var buttonValue = parseFloat($step2Validation.find('span:first').text());
-        $parent.on('click', function () {
-            var value = 0;
-            var $price = $(this).find(price);
-            value = parseFloat($price.text());
-
-
-            console.log(value);
-
-            $step2Validation.find('span:first').text((buttonValue + value).toFixed(2));
-        })
-    })();
+    generalMethods.setRadiobox();
   
     (function setInput() {
         
@@ -65,9 +48,7 @@ $(document).ready(function () {
         {
             id: 'discount',
             fieldLabel: 'Discount',
-            required: true,
-            type: 'text',
-            allowedCharacters: 'AlphaNumeric',
+            type: 'text'
         },
         {
             id: 'terms1',
@@ -79,7 +60,6 @@ $(document).ready(function () {
         {
             id: 'terms2',
             parent: 'item-box-container',
-            required: true,
             type: 'checkbox',
             triggerType: 'click'
         },

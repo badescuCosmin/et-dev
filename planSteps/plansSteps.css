@@ -2,7 +2,6 @@
 .main-content {
     margin-top: 154px;
 }
-
 /* step2 styles */
 .step-2 .container-photos {
     height: 45px;
@@ -130,7 +129,12 @@
 .padding-left-10 {
     padding-left: 10px;
 }
-
+.subscribe-pachet-details img {
+    width: 14px;
+    height: 18px;
+    margin-top: 2px;
+    margin-right: 8px;
+}
 /* checkboxes*/
 .container-checkbox {
     display: block;
