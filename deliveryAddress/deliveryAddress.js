@@ -1,12 +1,25 @@
-$(document).ready(function () {
-    
+$(document).ready(function() {
+
     (function setInput() {
         inputRestrictor.setInputOnlyWithDigits("phone");
         inputRestrictor.setInputOnlyWithDigits("zipCode");
         inputRestrictor.setInputWithExactCharactersLength("zipCode", 6);
         inputRestrictor.setInputWithExactCharactersLength("phone", 10);
 
+        //
+        inputRestrictor.setInputOnlyWithDigits("cvv");
+        inputRestrictor.setInputWithExactCharactersLength("cvv", 3);
+
         var inputs = [
+
+            {
+                id: 'cvv',
+                fieldLabel: 'Cvv',
+                required: true,
+                type: 'text',
+                charactersLength: 3,
+                allowedCharacters: 'Numeric'
+            },
             {
                 id: 'oras',
                 fieldLabel: 'Select a city',
@@ -19,13 +32,14 @@ $(document).ready(function () {
                 charactersLength: 6,
                 required: true,
                 type: 'text',
+                allowedCharacters: 'Numeric'
             },
             {
                 id: 'strada',
                 fieldLabel: 'Strada',
                 type: 'text',
                 allowedCharacters: 'AlphaNumeric',
-                required: true,
+                required: true
             },
             {
                 id: 'numar',
@@ -54,14 +68,13 @@ $(document).ready(function () {
                 fieldLabel: 'Phone',
                 required: true,
                 type: 'text',
-                charactersLength: 10
+                charactersLength: 10,
+                allowedCharacters: 'Numeric'
             }
         ]
         var inputsValidator = new FormValidator({ inputsList: inputs });
-        $("#addressValidation").on("click", function () {
+        $("#addressValidation").on("click", function() {
             generalMethods.goNextStep(inputsValidator)
         });
     })();
 });
-
-

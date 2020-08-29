@@ -53,7 +53,7 @@ validationMesages.getAllowedDigitsErrorMessage = function() {
 }
 
 validationMesages.getAllowedAlphaNumericErrorMessage = function() {
-    return `Enter only letters and digits, no other characters are allowed`;
+    return `Enter only letters and digits`;
 }
 
 
@@ -68,10 +68,3 @@ validationMesages.getMinValueErrorMessage = function(minValue) {
 validationMesages.getCharactersLengthErrorMessage = function(length) {
     return `Characters length required is ${length}`;
 }
-
-
-
-//chestii de precizat
-// orice checkbox are mandatory parent-ul, adica ala de apesi pe el sa fie checkbox-ul selectat;
-//orice chechbox/radiobox trebuie sa aiba neaparat ca si main container clasa .box-main-container
-//probleme, nu face by default trigger verificaaaa Alexxx
