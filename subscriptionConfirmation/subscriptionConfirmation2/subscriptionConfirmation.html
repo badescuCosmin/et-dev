@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="node_modules/roboto-fontface/css/roboto/roboto-fontface.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/roboto-fontface@0.10.0/css/roboto/roboto-fontface.min.css">
+    <!-- <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="./subscriptionConfirmation.css">
+</head>
+
+<body>
+
+    <div class="container main-container p-0">
+
+        <div class="canvas-container">
+            <canvas height='1' id='confetti' width='1' style="display: none;"></canvas>
+            <canvas id="drawing_canvas" class="confetti-canvas" width="1100" height="700"></canvas></canvas>
+            <canvas id="myCanvas" data-completed="100" data-width="200" data-height="200" height="170"></canvas>
+        </div>
+
+        <div class="row flex-column text-center card-wrapper mx-auto">
+            <div class="mx-auto card-subscription text-center">
+                <h3 class="card-name">Excelent Andrei!</h3>
+                <h2 class="header-first card-title">Esti abonat</h3>
+                    <p class="card-body">
+                        Mulțumim că te-ai alăturat Evertoys ! <br> Este momentul pentru prima ta comandă.
+                    </p>
+                    <p class="card-body card-footer-subscription">
+                        Abonamentul tău va fi înnoit Lunar <br> începând cu data insert &nbsp;<span>20/11/2022</span>
+                    </p>
+            </div>
+            <h2 class="card-body card-footer-subscription card-footer-info">Folosește filtrele de <span>vârstă</span> si
+                <span>disponibilitate</span> pentru a comanda jucării si cărți. </h2>
+            <div class="btn-wrapper">
+                <div class="btn-mask d-none d-lg-block"></div>
+                <button class="button-primary">Select Toys & Books</button>
+            </div>
+        </div>
+    </div>
+    <script src="./confettiAnimation.js"></script>
+    <script src="./subscriptionConfirmation.js"></script>
+    <style>
+        .confetti-canvas {
+            width: 1100px !important;
+            height: 700px !important;
+        }
+    </style>
+</body>
+
+</html>
