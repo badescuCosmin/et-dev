@@ -3,7 +3,6 @@ var generalMethods = {};
 (function() {
     var $itemRadioBoxContainer = $('.item-radio-box-container', $boxMainContainer),
         $boxMainContainer = $('.box-main-container'),
-        $navbarLink = $('.navbar-link'),
         addIcon = '<i class="fas fa-plus fa-sm icon-style checkbox-icon-add"></i>',
         checkIcon = '<i class="fas fa-check fa-sm icon-style checkbox-icon-check"></i>',
         radioIcon = '<i class="fas fa-check fa-sm icon-style radiobox-icon exist" style = "color: #FFF !important"></i>',
@@ -153,6 +152,7 @@ var generalMethods = {};
         })
     }
     generalMethods.getNavigation = function(){
+        var $navbarLink = $('.navbar-link');
         $navbarLink.on('click',function () {
             var listItems = $navbarLink;
             for (let i = 0; i < listItems.length; i++) {

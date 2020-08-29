@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    var $abonament = $("#abonament");
     generalMethods.setCheckbox();
     generalMethods.getNavigation();
     generalMethods.setButton();
