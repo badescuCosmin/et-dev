@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
     var $abonament = $("#abonament");
     generalMethods.setCheckbox();
     generalMethods.getNavigation();
