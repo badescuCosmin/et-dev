@@ -259,7 +259,7 @@ var FormValidator = (function() {
         var errorMessage = "";
         if (input.allowedCharacters) {
             if (input.allowedCharacters === charactersType.numeric) {
-                var patternDigits = /^[0-9-+() ]*$/;
+                var patternDigits = /^[0-9-+() /]*$/;
                 var patternLetters = /^[a-zA-Z]*$/i;
                 var isvalidDigits = _isValueValid(value, patternDigits);
                 var isvalidLetters = _isValueValid(value, patternLetters);

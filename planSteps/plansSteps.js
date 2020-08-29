@@ -13,6 +13,7 @@ $(document).ready(function() {
         inputRestrictor.setInputOnlyWithDigits("dataExpirare");
         inputRestrictor.setInputWithExactCharactersLength("dataExpirare", 5);
         inputRestrictor.putCharacterAfterNumberOfCharacters("dataExpirare", "/", 2);
+        inputRestrictor.setDate("dataExpirare");
 
         var step1Inputs = [{
                     id: 'lastName',

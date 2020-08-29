@@ -26,4 +26,16 @@ var inputRestrictor = {};
             $(this).val(partOfValue);
         });
     }
+
+    inputRestrictor.setDate = function(inputId) {
+        $(`#${inputId}`).on('keyup', function(e) {
+            var numberOfCharacters = this.value.replace(/ /g, '').length;
+            var intValue = parseInt(this.value);
+            if (numberOfCharacters === 2) {
+                if (intValue > 12) {
+                    this.value = "01";
+                }
+            }
+        });
+    }
 }());
