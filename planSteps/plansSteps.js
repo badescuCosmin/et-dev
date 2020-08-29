@@ -1,10 +1,16 @@
 $(document).ready(function() {
     generalMethods.setSteps();
     generalMethods.setRadiobox();
+<<<<<<< HEAD
     generalMethods.setRadiobox();
 
     (function setInput() {
 
+=======
+    generalMethods.setRadioButton();
+    function setInput() {
+        
+>>>>>>> 90cb36e06b614de51742c0d6f278db6b81cbbc9d
         inputRestrictor.setInputOnlyWithDigits("cvv");
         inputRestrictor.setInputWithExactCharactersLength("cvv", 3);
         inputRestrictor.setInputOnlyWithDigits("numarCard");
@@ -108,5 +114,6 @@ $(document).ready(function() {
             generalMethods.goNextStep(step2Validator);
 
         })
-    })()
+    }
+    setInput()
 })

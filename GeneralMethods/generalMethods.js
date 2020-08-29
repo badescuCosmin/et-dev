@@ -151,6 +151,24 @@ var generalMethods = {};
             })
         })
     }
+    generalMethods.setRadioButton = function(){
+        var price = '.price';
+        var itemBoxContainer = '.item-radio-box-container';
+        var $parent = $('input[name=subscription]').parents(itemBoxContainer);
+
+        var $step2Validation = $("#step2Validation");
+        var buttonValue = parseFloat($step2Validation.find('span:first').text());
+        $parent.on('click', function () {
+            var value = 0;
+            var $price = $(this).find(price);
+            value = parseFloat($price.text());
+
+
+            console.log(value);
+
+            $step2Validation.find('span:first').text((buttonValue + value).toFixed(2));
+        })
+    };
     generalMethods.getNavigation = function(){
         var $navbarLink = $('.navbar-link');
         $navbarLink.on('click',function () {
