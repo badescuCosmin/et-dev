@@ -2,8 +2,9 @@ $(document).ready(function() {
     generalMethods.setSteps();
     generalMethods.setRadiobox();
     generalMethods.setRadioButton();
+
     function setInput() {
-        
+
         inputRestrictor.setInputOnlyWithDigits("cvv");
         inputRestrictor.setInputWithExactCharactersLength("cvv", 3);
         inputRestrictor.setInputOnlyWithDigits("numarCard");
@@ -34,7 +35,7 @@ $(document).ready(function() {
                     fieldLabel: 'Password',
                     required: true,
                     type: 'text',
-                    minLength: '7',
+                    minLength: '4',
                     allowedCharacters: 'AlfaNumeric',
                 },
                 {
