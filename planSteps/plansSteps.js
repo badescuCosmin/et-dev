@@ -35,7 +35,7 @@ $(document).ready(function() {
                     fieldLabel: 'Password',
                     required: true,
                     type: 'text',
-                    minLength: '4',
+                    minLength: '3',
                     allowedCharacters: 'AlfaNumeric',
                 },
                 {
@@ -89,9 +89,11 @@ $(document).ready(function() {
 
             {
                 id: 'cvv',
-                fieldLabel: 'Cv',
+                fieldLabel: 'Cvv',
                 required: true,
-                type: 'text'
+                type: 'text',
+                minLength: '3',
+                allowedCharacters: 'Numeric'
             },
         ]
 

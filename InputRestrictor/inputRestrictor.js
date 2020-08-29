@@ -1,16 +1,20 @@
 var inputRestrictor = {};
 
 (function() {
+    var event = 'keypress';
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        event = "input";
+    }
+
     inputRestrictor.setInputOnlyWithDigits = function(inputId) {
-        $(`#${inputId}`).on('keydown', function(e) {
+        $(`#${inputId}`).on(event, function(e) {
             if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
                 return false;
             }
         });
     }
     inputRestrictor.setInputWithExactCharactersLength = function(inputId, charactersLength) {
-
-        $(`#${inputId}`).keypress('keydown', function(e) {
+        $(`#${inputId}`).on(event, function(e) {
             var value = this.value.replace(/ /g, '').length;
             if (value === charactersLength) {
                 return false;
