@@ -125,10 +125,7 @@ body {
     width: 100%;
     z-index: 10000;
 }
-.navbar .navbar-wrapper.container {
-    padding: 0;
-}
-.navbar .navbar-wrapper.container img {
+.navbar .navbar-wrapper.container .logo {
     cursor: pointer;
     width: 120px;
 }
