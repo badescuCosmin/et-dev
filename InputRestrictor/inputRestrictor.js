@@ -2,7 +2,7 @@ var inputRestrictor = {};
 
 (function() {
     inputRestrictor.setInputOnlyWithDigits = function(inputId) {
-        $(`#${inputId}`).keypress(function(e) {
+        $(`#${inputId}`).on('keydown', function(e) {
             if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
                 return false;
             }
@@ -10,7 +10,7 @@ var inputRestrictor = {};
     }
     inputRestrictor.setInputWithExactCharactersLength = function(inputId, charactersLength) {
 
-        $(`#${inputId}`).keypress(function(e) {
+        $(`#${inputId}`).keypress('keydown', function(e) {
             var value = this.value.replace(/ /g, '').length;
             if (value === charactersLength) {
                 return false;
