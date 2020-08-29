@@ -33,6 +33,7 @@
     margin-bottom: 16px;
 }
 .main-content .accordion-wrapper .card-link {
+    width: 100%;
     color:var(--white-color);
     opacity: .9;
     padding-left: 10px;
