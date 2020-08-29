@@ -6,10 +6,6 @@ $(document).ready(function() {
         inputRestrictor.setInputWithExactCharactersLength("zipCode", 6);
         inputRestrictor.setInputWithExactCharactersLength("phone", 10);
 
-        //
-        inputRestrictor.setInputOnlyWithDigits("cvv");
-        inputRestrictor.setInputWithExactCharactersLength("cvv", 3);
-
         var inputs = [
 
             {
