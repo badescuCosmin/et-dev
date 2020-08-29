@@ -20,8 +20,8 @@ for (var i = 0; i < 100; i++) {
     $('<div class="confetti-'+i+' '+colour+'"></div>').css({
       "width" : width+"px",
       "height" : height+"px",
-      "top" : -Math.random()*20+"%",
-      "left" : Math.random()*100+"%",
+      "top" : 30,
+      "left" : '50%',
       "opacity" : Math.random()+0.5,
       "transform" : "rotate("+Math.random()*360+"deg)"
     }).appendTo('.wrapper');  
@@ -31,8 +31,8 @@ for (var i = 0; i < 100; i++) {
   
   function drop(x) {
     $('.confetti-'+x).animate({
-      top: "100%",
-      left: "+="+Math.random()*15+"%"
+      top: "80%",
+      left: "+="+Math.random()*10+"%"
     }, Math.random()*3000 + 3000, function() {
       reset(x);
     });
