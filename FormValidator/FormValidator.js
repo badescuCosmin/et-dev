@@ -179,6 +179,7 @@ var FormValidator = (function() {
         input.ErrorMessages = [];
         _getRequiredValidation(value, input);
         _getEmailValidation(input, value);
+        _getAllowedDigitsValidation(input, value);
         _getAllowedCharactersValidation(input, value);
         _getAllowedAlphaNumericValidation(input, value);
         _getCharactersLengthValidation(input, numberOfCharacters);
@@ -193,9 +194,6 @@ var FormValidator = (function() {
         _getAllowedDigitsValidation(input, value);
         _getMinAndMaxValueValidation(input, value);
         _setInputValidation.apply(this, [input, $parentContainer])
-
-
-
     }
 
     //DROPDOWN SELECT
@@ -261,7 +259,7 @@ var FormValidator = (function() {
         var errorMessage = "";
         if (input.allowedCharacters) {
             if (input.allowedCharacters === charactersType.numeric) {
-                var patternDigits = /^[0-9-+()]*$/;
+                var patternDigits = /^[0-9-+() ]*$/;
                 var patternLetters = /^[a-zA-Z]*$/i;
                 var isvalidDigits = _isValueValid(value, patternDigits);
                 var isvalidLetters = _isValueValid(value, patternLetters);

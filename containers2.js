@@ -147,11 +147,7 @@ $(document).ready(function() {
                 required: true,
                 type: 'radiobox',
                 triggerType: 'click'
-            },
-
-
-
-
+            }
         ]
 
 

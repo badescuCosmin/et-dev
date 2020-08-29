@@ -78,18 +78,20 @@ $(document).ready(function() {
                 charactersLength: 16,
                 required: true,
                 type: 'text',
+                allowedCharacters: 'Numeric'
             },
             {
                 id: 'dataExpirare',
                 fieldLabel: 'Data Expirare',
                 required: true,
                 type: 'text',
-                charactersLength: 5
+                charactersLength: 5,
+                allowedCharacters: 'Numeric'
             },
 
             {
                 id: 'cvv',
-                fieldLabel: 'C',
+                fieldLabel: 'Cvv',
                 required: true,
                 type: 'text',
                 charactersLength: 3,
