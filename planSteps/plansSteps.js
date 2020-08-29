@@ -1,9 +1,8 @@
 $(document).ready(function () {
     generalMethods.setSteps();
     generalMethods.setRadiobox();
-    generalMethods.setRadiobox();
-  
-    (function setInput() {
+    generalMethods.setRadioButton();
+    function setInput() {
         
         inputRestrictor.setInputOnlyWithDigits("cvv");
         inputRestrictor.setInputWithExactCharactersLength("cvv", 3);
@@ -110,5 +109,6 @@ $(document).ready(function () {
             generalMethods.goNextStep(step2Validator);
 
         })
-    })()
+    }
+    setInput()
 })
