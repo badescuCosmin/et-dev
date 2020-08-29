@@ -21,7 +21,7 @@ for (var i = 0; i < 100; i++) {
       "width" : width+"px",
       "height" : height+"px",
       "top" : 30,
-      "left" : '50%',
+      "left" : '45%',
       "opacity" : Math.random()+0.5,
       "transform" : "rotate("+Math.random()*360+"deg)"
     }).appendTo('.wrapper');  
@@ -32,7 +32,7 @@ for (var i = 0; i < 100; i++) {
   function drop(x) {
     $('.confetti-'+x).animate({
       top: "80%",
-      left: "+="+Math.random()*10+"%"
+      left: "+="+Math.random()*15+"%"
     }, Math.random()*3000 + 3000, function() {
       reset(x);
     });
