@@ -92,7 +92,7 @@ $(document).ready(function() {
                 fieldLabel: 'Cvv',
                 required: true,
                 type: 'text',
-                minLength: '3',
+                charactersLength: 3,
                 allowedCharacters: 'Numeric'
             },
         ]
