@@ -31,7 +31,9 @@ $(document).ready(function () {
         $(this).parent('div').remove();
         x--;
     });
+
     (function setInput() {
+
         inputRestrictor.setInputWithExactCharactersLength("birthday", 8);
         inputRestrictor.putCharacterAfterNumberOfCharacters("birthday", "/", 2);
         // step1 inputs
@@ -57,6 +59,5 @@ $(document).ready(function () {
         $("#btn-cta").on("click", function () {
             generalMethods.goNextStep(inputsValidator);
         });
-
     })();
 });

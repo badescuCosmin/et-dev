@@ -104,7 +104,7 @@
 }
 .item-box-container .currency {
     font-size: var(--font12);
-    color: #717084;
+    color:var(--light-grey);
     padding-top: 5px;
     font-weight: var(--font-small-medium);
 }
@@ -251,7 +251,7 @@
     opacity: 80%;
 }
 .dark-violet {
-    background-color: #41436B!important;
+    background-color:var(--normal-textColor)!important;
 }
 .d-none-custom {
     display: none;

@@ -4,7 +4,7 @@
     margin-top: 150px;
 }
 .main-content .main-content-title {
-    color: #f52865;
+    color: var(--red-color);
     font-size: var(--font24);
     font-weight: var(--font-medium);
     line-height: 24px;
@@ -101,9 +101,6 @@
 }
 
 @media only screen and (max-width: 576px) {
-    .main-content {
-        margin-top: 35px;
-    }
     .main-content .main-content-body .subscription-container h3 {
         margin-top: 40px;
         margin-bottom: 16px;
@@ -120,5 +117,8 @@
     }
     .subscription-container .list-group-item .text-wrapper {
         line-height: 25px;
+    }
+    .main-content {
+        margin-top: 100px;
     }
 }

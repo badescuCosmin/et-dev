@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
     (function setInput() {
         inputRestrictor.setInputOnlyWithDigits("phone");
         inputRestrictor.setInputOnlyWithDigits("zipCode");

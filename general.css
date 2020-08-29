@@ -4,6 +4,9 @@
     --primary-color:#1170DA;
     --white-color:#ffffff;
     --normal-textColor:#41436B;
+    --red-color:#F52865;
+    --light-grey:#717084;
+    --error-color:#D91020;
 
     --font-bold:700;
     --font-medium:500;
@@ -44,7 +47,7 @@ body {
     color:#252D3C;
 }
 .header-secondary span {
-    color:#717084;
+    color:var(--light-grey);
 }
 .terms-text {
     font-weight: var(--font-small-medium);
@@ -69,18 +72,15 @@ body {
     background-color: orangered;
     border-radius: 12px;
 }
-
 .error-validation {
-    color: #D91020;
+    color: var(--error-color);
     font-size: var(--font12);
     height: 20px;
     display: block;
 }
-
 .error-border {
-    border: 1px solid #D91020 !important;
+    border: 1px solid var(--error-color) !important;
 }
-
 .modal-container {
     width: 348px;
     position: absolute;
@@ -94,7 +94,7 @@ body {
     padding: 20px;
 }
 .modal-container .choose-plan {
-    color: #f52865;
+    color: var(--red-color);
     font-size: var(--font18);
     font-weight: var(--font-medium);
     line-height: 24px;
@@ -265,12 +265,12 @@ body {
     width: 80%;
 }
 .item-box-container .text-container .main-text .price {
-    color: #717084;
+    color:var(--light-grey);
     text-align: right;
     width: 20%;
 }
 .item-box-container .text-container .sub-text {
-    color: #717084;
+    color:var(--light-grey);
     font-weight: var(--font-small-medium);
     font-size: var(--font14);
     padding: 5px 0px;
@@ -422,7 +422,7 @@ body {
       --font20:16px;
     }
     .info-container-wrapper .inner-wrapper {
-        width: 335px;
+        width: 100%;
     }
 }
 @media only screen and (max-width: 400px) {
@@ -430,17 +430,7 @@ body {
         width: 90%;
     }
 }
-/* media queris */
-
-@media only screen and (max-width: 362px) {
-    .info-container-wrapper .inner-wrapper {
-        width: 300px;
-    }
-}
 @media only screen and (max-width: 330px) {
-    .info-container-wrapper .inner-wrapper {
-        width: 280px;
-    }
     .item-box-container {
         border-radius: 12px;
         padding: 5px 8px;

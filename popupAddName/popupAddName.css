@@ -6,7 +6,7 @@
 .modal-container .modal-header-container .title {
     color: #1e2843;
     font-weight: var(--font-medium);
-    font-size: 18px;
+    font-size: var(--font18);
     line-height: 24px;
 }
 
@@ -16,9 +16,9 @@
     width: 66px;
 }
 .modal-body-container .description-info {
-    font-size: 15px;
+    font-size: var(--font14);
     font-weight: var(--font-small-medium);
-    color: #41436b;
+    color:var(--normal-textColor);
     line-height: 22px;
     margin-left: 14px;
 }
@@ -29,7 +29,7 @@
 
 .modal-body-container .options-container .add,
 .modal-body-container .options-container .remove_field{
-    color:#1170DA;
+    color:var(--primary-color);
     font-size: var(--font16);
     line-height: 20px;
     font-weight: var(--font-small-medium);

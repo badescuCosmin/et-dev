@@ -6,11 +6,11 @@
 .modal-container .modal-header-container .title {
     color: #1e2843;
     font-weight: var(--font-bold);
-    font-size: 22px;
+    font-size: var(--font22);
     line-height: 24px;
 }
 .modal-container .modal-header-container .subtitle {
-    color: #717084;
+    color:var(--light-grey);
     font-weight: var(--font-small-medium);
     font-size: var(--font14);
     line-height: 16px;
@@ -19,7 +19,7 @@
     margin-top: 16px;
 }
 .modal-body-container .modal-body-title span {
-    color: #717084;
+    color:var(--light-grey);
 }
 
 /* item box container popup extends the general subscription in this particular case*/

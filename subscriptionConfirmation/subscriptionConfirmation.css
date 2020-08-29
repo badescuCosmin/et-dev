@@ -1,11 +1,9 @@
 .main-container {
     margin-top: 10px;
 }
-
 .main-container .card-wrapper {
     width: 417px;
 }
-
 .main-container .card-subscription {
     background-color: var(--white-color);
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
@@ -16,21 +14,18 @@
     border-color: #fd9164;
     width: 100%;
 }
-
 .main-container .card-subscription .card-name {
-    color: #f52865;
+    color: var(--red-color);
     font-size: var(--font20);
     line-height: 24px;
     margin-top: 32px;
     margin-bottom: 10px;
     font-weight: var(--font-medium);
 }
-
 .main-container .card-subscription .card-title {
     color: var(--primary-color);
     margin-bottom: 24px;
 }
-
 .main-container .card-body {
     padding: 0;
     color: var(--normal-textColor);
@@ -39,19 +34,16 @@
     line-height: 24px;
     margin-bottom: 20px;
 }
-
 .main-container .card-body.card-footer-subscription {
     font-weight: var(--font-small-medium);
     margin-bottom: 32px;
 }
-
 .main-container .card-body.card-footer-subscription.card-footer-info {
     margin: 0 auto;
     margin-top: 238px;
     margin-bottom: 26px;
     width: 75%;
 }
-
 .main-container .card-body.card-footer-subscription span {
     color: #f8825d;
 }
@@ -81,7 +73,6 @@
 [class|="confetti"] {
     position: absolute;
 }
-
 .red {
     background-color: #ff6b00;
 }
@@ -93,7 +84,6 @@
 .blue {
     background-color: #00acca;
 }
-
 @media only screen and (max-width: 992px) {
     .main-container .card-body.card-footer-subscription.card-footer-info {
         margin-bottom: 126px;
@@ -102,7 +92,6 @@
         width: 100%;
     }
 }
-
 @media only screen and (max-width: 576px) {
     :root {
         --font24: 24px;
