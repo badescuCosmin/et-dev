@@ -1,18 +1,14 @@
-body {
-    overflow-x: hidden;
-}
 .main-container {
     margin-top: 10px;
 }
 
 .main-container .card-wrapper {
-    
     width: 417px;
 }
 
 .main-container .card-subscription {
     background-color: var(--white-color);
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .2);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     margin-top: 180px;
     border-style: solid;
@@ -59,12 +55,13 @@ body {
 .main-container .card-body.card-footer-subscription span {
     color: #f8825d;
 }
-
-.wrapper {
-    /* position: relative;*/
-    min-height: 100vh;
+.canvas-container {
+    position: absolute;
 }
-
+#drawing_canvas {
+    width: 1100px;
+    height: 800px;
+}
 .child {
     border: 10px solid #eff0f3;
     margin-left: auto;
@@ -92,23 +89,35 @@ body {
     .main-container .card-body.card-footer-subscription.card-footer-info {
         margin-bottom: 126px;
     }
+    .main-container .card-body.card-footer-subscription.card-footer-info {
+        width: 100%;
+    }
+    #drawing_canvas {
+        width: 700px;
+    }
+}
+@media only screen and (max-width: 848px) {
+    #drawing_canvas {
+        width: 500px;
+    }
 }
 
 @media only screen and (max-width: 576px) {
-     :root {
+    :root {
         --font24: 24px;
         --font20: 20px;
     }
     .main-container .card-wrapper {
         width: 90%;
     }
-    @media only screen and (max-width: 992px) {
-        .main-container .card-body.card-footer-subscription.card-footer-info {
-            width: 100%;
-        }
+    #drawing_canvas {
+        width: 400px;
+    }
+}
+@media only screen and (max-width: 460px) {
+    #drawing_canvas {
+        width: 320px;
     }
 }
 
-.canvas-container {
-    position: absolute;
-}
+
