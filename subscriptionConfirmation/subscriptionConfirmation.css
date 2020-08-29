@@ -1,8 +1,12 @@
+body {
+    overflow-x: hidden;
+}
 .main-container {
     margin-top: 10px;
 }
 
 .main-container .card-wrapper {
+    
     width: 417px;
 }
 
