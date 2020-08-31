@@ -49,9 +49,7 @@ var inputRestrictor = {};
         });
     }
 
-    inputRestrictor.onFocus = function(inputId) {
-        setTimeout(function() {
-            $(`#${inputId}`).focus();
-        }, 100);
+    inputRestrictor.onFocus = function(inputName) {
+        $(`input[name=${inputName}]`).focus();
     }
 }());
