@@ -14,6 +14,18 @@ $(document).ready(function() {
         inputRestrictor.setInputWithExactCharactersLength("dataExpirare", 5);
         inputRestrictor.putCharacterAfterNumberOfCharacters("dataExpirare", "/", 2);
         inputRestrictor.setDate("dataExpirare");
+        //
+        inputRestrictor.onFocus('firstName');
+        inputRestrictor.focusNextElement([
+            'firstName',
+            'lastName',
+            'email',
+            'password',
+            'discount',
+            'terms1',
+            'terms2',
+            'step1Validation'
+        ]);
 
         var step1Inputs = [{
                     id: 'lastName',
