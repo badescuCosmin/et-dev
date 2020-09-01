@@ -32,6 +32,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     font-family: 'Roboto';
+    zoom:100%;
     user-select: none;
     /* margin-bottom: 100px; */
 }
@@ -60,7 +61,7 @@ body {
     font-weight: var(--font-medium);
 }
 .mt-142 {
-    margin-top: 142px;
+    margin-top: 130px;
 }
 .info-container-wrapper .inner-wrapper {
     width: 424px;
@@ -438,12 +439,13 @@ body {
         padding:1px 2px 1px 5px;
     }
 }
-@media (resolution: 120dpi){ 
+
+@media (resolution: 120dpi) and (min-width: 992px){ 
     body {
-        zoom:75%;
+        zoom:80%;
     }
 }
-@media (min-resolution: 144dpi){ 
+@media (resolution: 144dpi) and (min-width: 992px){ 
    body {
        zoom:67%;
    }
