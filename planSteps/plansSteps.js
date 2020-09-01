@@ -15,7 +15,7 @@ $(document).ready(function() {
         inputRestrictor.putCharacterAfterNumberOfCharacters("dataExpirare", "/", 2);
         inputRestrictor.setDate("dataExpirare");
         //
-        inputRestrictor.onFocus('prenumeTest');
+        inputRestrictor.onFocus('firstName');
         inputRestrictor.focusNextElement([
             'firstName',
             'lastName',
