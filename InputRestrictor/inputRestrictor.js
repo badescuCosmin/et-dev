@@ -50,6 +50,6 @@ var inputRestrictor = {};
     }
 
     inputRestrictor.onFocus = function(inputId) {
-        $(`#${inputId}`).focus();
+        document.getElementById(`${inputId}`).focus();
     }
 }());
