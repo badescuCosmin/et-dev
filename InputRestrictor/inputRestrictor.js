@@ -43,12 +43,9 @@ var inputRestrictor = {};
         inputsIds.forEach(function(id, index) {
             $(`#${id}`).on('keypress input', function(e) {
                 if (e.which === 13) {
-                    $(`#${inputsIds[index+1]}`).focus();
-                    if (index === 0) {
-                        $(`#${inputsIds[index+2]}`).scroll();
-                    } else {
-                        $(`#${inputsIds[index+1]}`).scroll();
-                    }
+
+                    $(`#${inputsIds[index+2]}`).scroll();
+
                 }
             })
         });
